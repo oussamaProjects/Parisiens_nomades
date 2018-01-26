@@ -11,6 +11,15 @@
         display: block;
         height: 100%;
         background: $gray-lighter;
+        &:after,
+        &:before{
+            content: "";
+            @include position(absolute, 0, 0, 0, 0);
+            background-color: rgba($product-thumbnail-hover, .1);
+            z-index: 1;
+            opacity: 0;
+            transition: opacity .25s ease-in-out;
+        } 
     }
 
     .product-title a {
@@ -35,6 +44,13 @@
             .product-links{
                 visibility: visible;
                 opacity: 1;
+            }
+
+            .product-thumbnail { 
+                &:after,
+                &:before{
+                    opacity: 1;
+                } 
             }
 
             .highlighted-informations {
@@ -98,11 +114,11 @@
 
     .product-links{
         position: absolute;
-        top: 50%;
+        top: 30%;
+        z-index: 2;
         transition: all .25s ease-in-out;
         opacity: 0;
-        visibility: hidden;
-        margin-top: oe_rem(-90px);
+        visibility: hidden;  
         height: oe_rem(52px);
         width: 100%;
         display: flex;

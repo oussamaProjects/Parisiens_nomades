@@ -8,7 +8,7 @@ $(document).ready(function () {
 		autoplayTimeout:1500,
 		autoplayHoverPause:true,		
 		loop:true,
-		margin:10,
+		margin:30,
 		dots: false,
 		nav:true,	 
 		navText: ['<i class="fa fa-long-arrow-left" aria-hidden="true"></i>','<i class="fa fa-long-arrow-right" aria-hidden="true"></i>'],
@@ -20,7 +20,7 @@ $(document).ready(function () {
 				items:3
 			},
 			1000:{
-				items:5
+				items:4
 			}
 		}
 	});    

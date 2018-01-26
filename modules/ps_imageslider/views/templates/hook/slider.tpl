@@ -27,23 +27,20 @@
   <div id="carousel" data-ride="carousel" class="carousel slide" data-interval="{$homeslider.speed}" data-wrap="{(string)$homeslider.wrap}" data-pause="{$homeslider.pause}">
     <ul class="carousel-inner" role="listbox">
       {foreach from=$homeslider.slides item=slide name='homeslider'}
-        <li class="carousel-item {if $smarty.foreach.homeslider.first}active{/if}" role="option" aria-hidden="{if $smarty.foreach.homeslider.first}false{else}true{/if}">
-     
-            <figure>
-              <img src="{$slide.image_url}" alt="{$slide.legend|escape}">
-              {if $slide.title || $slide.description}
-                <figcaption class="caption">
-                  <h2 class="display-1 caption-title">{$slide.title}</h2>
-                  <div class="caption-description">{$slide.description nofilter}</div>
-                  <a href="{$slide.url}" class="btn btn-white" >
-                    {l s='Learn more' d='Shop.Theme.Catalog'}
-                    <i class="fa fa-angle-right" aria-hidden="true"></i>
-                  </a>
-                </figcaption>
-              {/if}
-            </figure>
-           
-        </li>
+          <li class="carousel-item {if $smarty.foreach.homeslider.first}active{/if}" role="option" aria-hidden="{if $smarty.foreach.homeslider.first}false{else}true{/if}">
+        <a href="{$slide.url}">
+      
+              <figure>
+                <img src="{$slide.image_url}" alt="{$slide.legend|escape}">
+                {if $slide.title || $slide.description}
+                  <figcaption class="caption">
+                    {* <h2 class="display-1 caption-title">{$slide.title}</h2> *}
+                    <div class="caption-description">{$slide.description nofilter}</div> 
+                  </figcaption>
+                {/if}
+              </figure>
+        </a>
+          </li>
       {/foreach}
     </ul>
     <div class="direction" aria-label="{l s='Carousel buttons' d='Shop.Theme.Global'}">

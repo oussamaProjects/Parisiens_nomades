@@ -1,36 +1,42 @@
 .carousel{ 
   float: none;
   margin-bottom: oe_rem(40px);
-  height: oe_rem(415px);
   position: relative;
   @include oe_box-shadow;
   .carousel-inner {
     height: oe_rem(415px);
-   .carousel-item {
-    height: oe_rem(415px);
+    .carousel-item { 
+      height: oe_rem(415px);
         .caption {
-          top: 0;
-          left: 4.33333%;
-          width: 40%;
-          background: transparent;
-          @include flex(flex-start, center, column);
+          width: 100%;
+          text-align: center;
+          padding: oe_rem(20px); 
+          background: rgba($brand-slider, .8);
+          @include position(absolute, 0, 0, 0, 0); 
           .caption-title{
-            color: $gray-lighter; 
-            font-size: oe_rem(24px);
+            color: $white;
+            font-size: oe_rem(60px);
             font-family: $primary-font-family;
             font-weight: initial;
-            line-height: oe_rem(36px);   
+            line-height: oe_rem(80px);    
             margin-bottom: oe_rem(18px);
             padding-bottom: oe_rem(6px); 
+            display: none;
           }
           .caption-description{
-            padding-bottom: oe_rem(40px);
+            height: 100%;
+            width: 100%;
+            border: 1px solid $gray-lighter;
+            @include flex(center, center, column);
             p{
+              font-size: oe_rem(50px);
+              line-height: oe_rem(80px);   
+              font-family: $primary-font-family; 
               color: $white;
+              text-align: center;
             }
           }
         } 
-    
     } 
   }
 
@@ -39,7 +45,7 @@
     padding: 0;
     margin: 0; 
     @include flex(center, flex-end, row);
-    @include position(absolute, initial, oe_rem(24px), oe_rem(15px), oe_rem(24px));
+    @include position(absolute, initial, oe_rem(24px), oe_rem(10px), oe_rem(24px));
     z-index: 9;
     li{
       width: oe_rem(10px);
