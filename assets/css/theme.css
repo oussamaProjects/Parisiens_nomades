@@ -12137,6 +12137,85 @@ textarea.form-control {
         padding-bottom: 0;
         border-bottom: 0; }
 
+#manufacturers_slider {
+  margin-bottom: 2.5rem; }
+  #manufacturers_slider .manufacturer a {
+    height: 10.625rem;
+    background-color: #f5f5f5;
+    text-align: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -moz-align-items: center;
+    -ms-align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -moz-justify-content: center;
+    -ms-justify-content: center;
+    -webkit-box-pack: center;
+            justify-content: center;
+    -ms-flex-pack: center;
+    -moz-flex-direction: row;
+    -ms-flex-direction: row;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+            flex-direction: row; }
+    #manufacturers_slider .manufacturer a img {
+      width: auto;
+      opacity: .7;
+      transition: all 0.2s ease-in-out; }
+    #manufacturers_slider .manufacturer a:hover img {
+      opacity: 1; }
+
+.custom-carousel.product-carousel .owl-nav [class*=owl-] {
+  margin-top: -3.125rem; }
+
+.custom-carousel .owl-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -moz-justify-content: space-between;
+  -ms-justify-content: space-between;
+  -webkit-box-pack: justify;
+          justify-content: space-between;
+  -ms-flex-pack: space-between;
+  -moz-flex-direction: row;
+  -ms-flex-direction: row;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+          flex-direction: row;
+  margin: 0; }
+  .custom-carousel .owl-nav [class*=owl-] {
+    background-color: transparent;
+    color: #292627;
+    padding: 0;
+    margin: 0;
+    width: 2.5rem;
+    height: 2.5rem;
+    line-height: 2.8125rem;
+    margin-top: -1.25rem; }
+    .custom-carousel .owl-nav [class*=owl-]:hover {
+      background-color: transparent;
+      color: #cccccc; }
+  .custom-carousel .owl-nav .owl-next {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    bottom: initial;
+    left: initial; }
+  .custom-carousel .owl-nav .owl-prev {
+    position: absolute;
+    top: 50%;
+    right: initial;
+    bottom: initial;
+    left: 0; }
+
 .sitemap-title {
   text-transform: capitalize; }
 
@@ -13406,90 +13485,11 @@ textarea.form-control {
     bottom: 0;
     left: initial; }
 
-#manufacturers_slider {
-  margin-bottom: 2.5rem; }
-  #manufacturers_slider .manufacturer a {
-    height: 10.625rem;
-    background-color: #f5f5f5;
-    text-align: center;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -moz-align-items: center;
-    -ms-align-items: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -moz-justify-content: center;
-    -ms-justify-content: center;
-    -webkit-box-pack: center;
-            justify-content: center;
-    -ms-flex-pack: center;
-    -moz-flex-direction: row;
-    -ms-flex-direction: row;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-            flex-direction: row; }
-    #manufacturers_slider .manufacturer a img {
-      width: auto;
-      opacity: .7;
-      transition: all 0.2s ease-in-out; }
-    #manufacturers_slider .manufacturer a:hover img {
-      opacity: 1; }
-
 #right-column .right-column-content {
   padding: 0.9375rem;
   background-color: #f5f5f5;
   max-width: 100%;
   overflow: hidden; }
-
-.custom-carousel.product-carousel .owl-nav [class*=owl-] {
-  margin-top: -3.125rem; }
-
-.custom-carousel .owl-nav {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -moz-align-items: center;
-  -ms-align-items: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -moz-justify-content: space-between;
-  -ms-justify-content: space-between;
-  -webkit-box-pack: justify;
-          justify-content: space-between;
-  -ms-flex-pack: space-between;
-  -moz-flex-direction: row;
-  -ms-flex-direction: row;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-          flex-direction: row;
-  margin: 0; }
-  .custom-carousel .owl-nav [class*=owl-] {
-    background-color: transparent;
-    color: #292627;
-    padding: 0;
-    margin: 0;
-    width: 2.5rem;
-    height: 2.5rem;
-    line-height: 2.8125rem;
-    margin-top: -1.25rem; }
-    .custom-carousel .owl-nav [class*=owl-]:hover {
-      background-color: transparent;
-      color: #cccccc; }
-  .custom-carousel .owl-nav .owl-next {
-    position: absolute;
-    top: 50%;
-    right: 0;
-    bottom: initial;
-    left: initial; }
-  .custom-carousel .owl-nav .owl-prev {
-    position: absolute;
-    top: 50%;
-    right: initial;
-    bottom: initial;
-    left: 0; }
 
 /*** Responsive part ***/
 @media (max-width: 767px) {
