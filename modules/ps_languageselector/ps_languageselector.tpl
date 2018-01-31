@@ -29,7 +29,9 @@
       <ul class="hidden-sm-down language-selector" aria-labelledby="language-selector-label">
         {foreach from=$languages item=language}
           <li {if $language.id_lang == $current_language.id_lang} class="current" {/if}>
-            <a href="{url entity='language' id=$language.id_lang}" class="dropdown-item">{$language.name_simple}</a>
+            <a href="{url entity='language' id=$language.id_lang}">
+              <img src="{$urls.img_url}langues/{$language.iso_code}.jpg" alt="{$language.name_simple}">
+            </a>
           </li>
         {/foreach}
       </ul>
