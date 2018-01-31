@@ -76,15 +76,17 @@
 						text-overflow: ellipsis;
 						white-space: nowrap;
 						color: $gray-dark;
-						text-transform: capitalize;
-						font-size: oe_rem(14px);
-						line-height: oe_rem(20px);
-						font-family: $primary-font-family;
+						text-transform: uppercase;
+						font-size: oe_rem(16px);
+						line-height: oe_rem(20px); 
+						font-weight: 600;
+						margin-bottom: oe_rem(10px);
 					}
 					.product-price {
 						display: block;
-						margin: oe_rem(6px) 0 0;
 						color: $gray-darker;
+						font-size: oe_rem(16px); 
+						font-weight: 600;
 					}
 					.remove-from-cart {
 						display: block;
@@ -94,9 +96,8 @@
 					}
 					.attributes_content {
 						display: block;
-						font-size: oe_rem(12px);
-						color: #666;
-						margin: 5px 0 0;
+						font-size: oe_rem(16px);
+						color: #666; 
 					}
 					strong {
 						font-weight:400;

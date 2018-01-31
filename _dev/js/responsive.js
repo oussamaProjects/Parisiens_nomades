@@ -67,7 +67,7 @@ function toggleMobileFixed()
 		$(window).scroll(function () {
 			let scrollTop = $(this).scrollTop();
 			if (scrollTop  >= 20) { $('.header-nav').stop().addClass("fixed"); }
-			else{ $('#header').stop().removeClass("fixed"); }
+			else{ $('.header-nav').stop().removeClass("fixed"); }
 		});
 		console.log("mobile");
 	} else { 

@@ -125,12 +125,11 @@
   }
 
   @include media("<lg"){
-    margin: 0;
-    display: inline-block;
+    margin: 0; 
     a[data-depth="0"] { 
       height: oe_rem(60px);
-      line-height: oe_rem(60px); 
-      padding: 0 oe_rem(20px); 
+      line-height: oe_rem(60px);  
+      font-size:oe_rem(15px); 
     }
   }
 }
@@ -151,7 +150,8 @@
   padding: oe_rem(10px) 0;
   background: white;
   overflow-y: scroll;
-  height: oe_rem(350px); 
+  height: oe_rem(500px); 
+  @include position(absolute, 100%, 0, 0, 0);
   #top-menu {
     margin-bottom: oe_rem(10px);
   }
@@ -159,6 +159,9 @@
     color: $gray-darker;
     padding: oe_rem(5px) oe_rem(15px);
     width: 100%;
+    li{
+      float: none;
+    }
     &[data-depth="1"]{
       padding-right: 0;
     }

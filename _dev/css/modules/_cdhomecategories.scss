@@ -1,6 +1,6 @@
 #homecategories {
 	.categories{ 
-  
+		
 		display: grid;
 		grid-template-columns: repeat(12, 1fr);
 		grid-column-gap: oe_rem(30px);
@@ -10,7 +10,7 @@
 			overflow: hidden;	
 			@include oe_box-shadow;
 			position: relative;
-			background-color: $gray-darker;
+			background: $gray-lighter;
 			height: oe_rem(320px);
 			@include flex(center, center, column); 
 			&:hover{
@@ -85,12 +85,10 @@
 					}
 				}      
 			}
-
 			.image {  
 				width: 100%;
 				height: 100%;
 				img { 
-
 					height: 100%;
 					display: block;
 					margin: 0 auto;
@@ -98,9 +96,10 @@
 					min-height: 100%;
 					max-width: initial;
 					max-height: initial;
-				
+					
 				}
 			}
+
 			.info{
 				height: oe_rem(320px);
 				@include position(absolute, initial, 0, 0, 0);
@@ -110,7 +109,8 @@
 				opacity: 0;
 				visibility: hidden;
 				.info-background{
-					height: 100%;;
+					height: 100%;
+					padding: oe_rem(10px);
 					background-color: rgba($brand-danger, .8);
 					@include flex(center, center, column);
 					.title{
@@ -141,28 +141,24 @@
 		}
 		@include media("<lg"){
 			.categorie { 
-				height: oe_rem(240px);
-				max-height: oe_rem(240px);
-				&:nth-child(1){  
-					grid-column: 1/13;  
+				grid-column: 3/11 !important; 
+				height: auto !important;    
+				max-height: oe_rem(240px); 
+				&:nth-child(3){   
 					height: oe_rem(700px);
 					max-height: oe_rem(700px);
+					.info{
+						height: oe_rem(700px); 
+					}
 				}
-				&:nth-child(2){  
-					grid-column: 1/7; 
-				}
-				&:nth-child(3){  
-					grid-column: 7/13;  
-				}
-				&:nth-child(4){ 
-					grid-column: 1/13;  
-				}
-				&:nth-child(5){  
-					grid-column: 1/7; 
-				}
+				&:nth-child(2),
+				&:nth-child(3),
+				&:nth-child(4),
+				&:nth-child(5),
 				&:nth-child(6){  
-					grid-column: 7/13;  
-				}
+					grid-column: 3/11 !important; 
+				} 
+				
 				.image {  
 					img{
 						height: 100% !important;
@@ -173,14 +169,21 @@
 				} 
 			}
 		}
-	
+		
 		@include media("<md"){
 			.categorie {
 				grid-column: 1/13 !important; 
 				height: auto !important;    
-				min-height: oe_rem(160px);
-				background: $gray-lighter;
-
+				min-height: oe_rem(160px); 
+				
+				&:nth-child(3){   
+					height: oe_rem(400px);
+					max-height: oe_rem(400px);
+					.info{
+						height: oe_rem(400px); 
+					}
+				}
+				
 				&:nth-child(2),
 				&:nth-child(3),
 				&:nth-child(4),
@@ -188,7 +191,7 @@
 				&:nth-child(6){  
 					grid-column: 1/13 !important; 
 				} 
-
+				
 				.image {   
 					img { 
 						height: initial;
@@ -199,32 +202,37 @@
 						max-width: 100%; 
 					}
 				}
-
+				
 				.info{
-					height: 100%;
-
-					.title{
-						font-size: oe_rem(20px); 
-					}
-					.court_description{
-						font-size: oe_rem(18px); 
-						padding: oe_rem(10px) 0;
-					}
-					.description{
-						b,strong{
-							font-size: 18px; 
-							padding: oe_rem(10px) 0;
+					height: 100%;   
+					padding: oe_rem(10px); 
+					.info-background{  
+						.title{
+							position: relative;
+							font-size: oe_rem(40px);
+							line-height: oe_rem(16px); 
+							margin-top: oe_rem(10px);  
+							margin-bottom: 0;  
 						}
-						p{
-							font-size: oe_rem(14px); 
+						.court_description{
+							font-size: oe_rem(18px); 
+							padding: 0;
+						}
+						.description{ 
+							font-size: 16px; 
 							color: $white;
-							margin: 0;
-						}
+							margin: 10px 0;
+							p{
+								font-size: 16px; 
+								color: $white;
+								margin: 0;
+							}
+						} 
 					} 
-
+					
 				} 
 			}
 		} 
 	}
-
+	
 }

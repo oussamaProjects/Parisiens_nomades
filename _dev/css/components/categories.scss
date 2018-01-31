@@ -36,10 +36,10 @@
     padding: oe_rem(65px);
     .titre{
       color: $white;
-      font-size: oe_rem(24px);  
-      font-family: $primary-font-family;
-      font-weight: initial;
-      text-transform: uppercase;
+      font-size: oe_rem(60px);  
+      font-weight: 600;
+      line-height: oe_rem(37px);
+      font-family: $primary-font-family; 
       text-shadow: 1px 1px 0px $gray-darker;
       margin-bottom: oe_rem(20px);
     }
@@ -303,9 +303,7 @@
     background: white;
     padding: 0.375rem 0;
     margin-bottom: 0; 
-    @include flex(flex-start, flex-start, row);
-    li {
-    }
+    @include flex(flex-start, flex-start, row); 
   }
   a {
     color: black;
@@ -391,8 +389,7 @@
     margin: 0;
   }
   .category-sub-menu {
-    margin-top: $small-space;
-    // padding-left: oe_rem(10px);
+    margin-top: $small-space; 
     .category-sub-link{
       font-size: $base-font-size;
       display: block;
@@ -406,11 +403,11 @@
       position: relative;
       &[data-depth="0"] {
         border-top: 1px solid $gray-light;
-        padding: oe_rem(12px) 0;
-        > a { 
-          font-family: $primary-font-family;
+        padding: oe_rem(8px) 0;
+        > a {  
           text-transform: uppercase;
           font-size: oe_rem(16px);
+          font-weight: 600;
           width: 100%;
           display: inline-block;
           margin: 0.3125rem 0 0;
@@ -427,7 +424,7 @@
       &[data-depth="1"]{
         margin-bottom: $small-space;
         > a { 
-          font-weight: 600;
+          font-weight: 400;
           font-size: oe_rem(16px); 
         }
         .category-sub-menu{

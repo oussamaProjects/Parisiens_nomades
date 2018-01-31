@@ -89,31 +89,33 @@
 
 #_desktop_user_info{
   margin: 0 oe_rem(10px); 
-  .user-info{
-    position: relative; 
-    .user-info-box{
-      @include oe_box-shadow;
-      @include position(absolute, 100%, initial, initial, 0); 
-      background: white;
-      padding: oe_rem(5px) oe_rem(15px);
-      border: 1px solid $gray;
-      display: none;
-      border-radius: oe_rem(4px);
-      a{
-        display: block;
-        line-height: oe_rem(30px);
-      }
-    }
-    a{ 
-      color: $gray-darker;  
-      .icon-user,
-      .icon-user-unfollow{
-        font-size: oe_rem(24px);
-        margin-bottom: 4px;
-      } 
+  
+}
+.user-info{
+  position: relative; 
+  .user-info-box{
+    @include oe_box-shadow;
+    @include position(absolute, 100%, initial, initial, 0); 
+    background: white;
+    padding: oe_rem(5px) oe_rem(15px);
+    border: 1px solid $gray;
+    display: none;
+    border-radius: oe_rem(4px);
+    a{
+      display: block;
+      line-height: oe_rem(30px);
     }
   }
+  a{ 
+    color: $gray-darker;  
+    .icon-user,
+    .icon-user-unfollow{
+      font-size: oe_rem(24px);
+      margin-bottom: 4px;
+    } 
+  }
 }
+
 
 #_desktop_my_contact_link{
   a{
@@ -133,6 +135,7 @@
   background-color: $black; 
   .logo_white{
     max-width: 100%; 
+    margin-bottom: oe_rem(40px);
   }
   .menu-footer {
     .ul_title{ 
@@ -145,10 +148,12 @@
       margin-bottom: oe_rem(10px);
     } 
     ul{
+      padding-bottom: oe_rem(20px);
       li {
         a {
           color: $gray;
           cursor: pointer;
+          display: block;
           font-size: $base-font-size;
           height: oe_rem(30px);
           line-height: oe_rem(30px); 
@@ -179,58 +184,29 @@
     padding-bottom: 0.625rem;
     border-bottom: 1px solid $gray-lighter;
   }
+}
+
+@include media-breakpoint-down(md) { 
+  .block-contact {
+    padding-left: 1.5rem;
+  }
+
   .footer-container {
     box-shadow: none;
-    margin-top: 0;
-    .wrapper {
-      padding-left: 0 !important;
-      padding-right: 0 !important;
-    }
-    .links {
-      .h3 {
-        line-height: 1.5;
-        font-size: 1rem;
-      }
-      .title {
-        padding: 0.625rem;
-        border-bottom: 1px solid $gray-lighter;
-        cursor: pointer;
-        .collapse-icons .remove {
-          display: none;
-        }
-      }
-      .title[aria-expanded="true"] .collapse-icons {
-        .add {
-          display: none;
-        }
-        .remove {
-          display: block;
-        }
-      }
-      .navbar-toggler {
-        display: inline-block;
-        padding: 0;
-      }
-      .collapse {
-        display: none;
-        &.in {
-          display: block;
-        }
-      }
-      ul {
-        background-color: $gray-lighter;
-        margin-bottom: 0;
-        > li {
-          padding: 0.625rem;
-          border-bottom: 1px solid white;
-          font-weight: bold;
+    margin-top: 0; 
+    .menu-footer {
+      .ul_title{ 
+        text-align: center
+      } 
+      ul{ 
+        li {
           a {
-            color: $gray-darker;
-          }
+           text-align: center;
+           display: block;
+          } 
         }
       }
     }
-
     .footer-bas{
       @include flex(center, center, column); 
       height: auto;  
@@ -239,21 +215,6 @@
       .sprt{
         display: none;
       } 
-    }
-  }
-  
-}
-@include media-breakpoint-down(md) { 
-  .block-contact {
-    padding-left: 1.5rem;
-  }
-
-  .footer-container {  
-  
-    .footer-bas{   
-      .sprt{
-        display: none;
-      }
     }
   }
   

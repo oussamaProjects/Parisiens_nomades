@@ -35,12 +35,12 @@ and $page.page_name != 'manufacturer'
                {elseif $page.page_name == 'prices-drop'}
                   <div class="titre cms">
                       {l s='Promotions' d='Shop.Theme.Catalog'} 
-                  </div>
-              {else}
-               <div class="titre cms">
-                     {block name='page_title'}{$page.page_name} {/block}
+                  </div>  
+                {else}
+                  <div class="titre cms">
+                    {block name='page_title'}{$page.page_name} {/block}
                   </div> 
-              {/if} 
+                {/if} 
 
             {/block}
          {/block}

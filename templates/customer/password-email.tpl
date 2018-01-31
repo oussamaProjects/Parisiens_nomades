@@ -24,11 +24,20 @@
  *}
 {extends file='page.tpl'}
 
+
 {block name='page_title'}
-  {l s='Forgot your password?' d='Shop.Theme.Customeraccount'}
+  <div class="intro">
+    <div class="logo_container">
+      <img class="logo img-responsive" src="{$shop.logo}" alt="{$shop.name}">
+    </div>    
+    <div class="intro-titre">{l s='Grossiste & sourcing en produits de mode' d='Shop.Theme.Customeraccount'}</div>
+    <div class="intro-sous-titre">{l s='Site réservé aux professionnels' d='Shop.Theme.Customeraccount'}</div>
+  </div>
 {/block}
 
 {block name='page_content'}
+      <div class="password_form">
+
   <form action="{$urls.pages.password}" class="forgotten-password" method="post">
 
     <ul class="ps-alert-error">
@@ -45,9 +54,13 @@
     </ul>
 
     <header>
-      <p class="send-renew-password-link">{l s='Please enter the email address you used to register. You will receive a temporary link to reset your password.' d='Shop.Theme.Customeraccount'}</p>
+      <div class="rox">
+        <div class="col-md-10 offset-md-1">
+          <p class="send-renew-password-link">{l s='Please enter the email address you used to register. You will receive a temporary link to reset your password.' d='Shop.Theme.Customeraccount'}</p>
+        </div>
+      </div>
     </header>
-
+<div class="clearfix"></div>
     <section class="form-fields">
       <div class="form-group center-email-fields">
         <label class="col-md-3 form-control-label required">{l s='Email address' d='Shop.Forms.Labels'}</label>
@@ -64,6 +77,7 @@
     </section>
 
   </form> 
+  </div>
 {/block}
 
 {block name='page_footer'}

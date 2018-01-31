@@ -25,14 +25,22 @@
 {extends file='page.tpl'}
 
 {block name='page_title'}
-  {l s='Authentication' d='Shop.Theme.Customeraccount'}
+  <div class="intro">
+    <div class="logo_container">
+      <img class="logo img-responsive" src="{$shop.logo}" alt="{$shop.name}">
+    </div>    
+    <div class="intro-titre">{l s='Grossiste & sourcing en produits de mode' d='Shop.Theme.Customeraccount'}</div>
+    <div class="intro-sous-titre">{l s='Site réservé aux professionnels' d='Shop.Theme.Customeraccount'}</div>
+  </div>
 {/block}
 
+.  
 {block name='page_content'}
     {block name='login_form_container'}
  
+      <div class="authentication_form">
       <div class="row">
-        <div class="col-md-6">
+        <div class="col-md-5 offset-md-1">
           <div class="h3">{l s='You do not have an account ?' d='Shop.Theme.Customeraccount'}</div>
           <br class="hidden-sm-down">
           <p>{l s='Saisissez votre adresse e-mail pour créer votre compte' d='Shop.Theme.Customeraccount'}</p>
@@ -46,7 +54,7 @@
           <hr class="hidden-md-up">
           <br class="hidden-md-up">
         </div>
-        <div class="col-md-6">
+        <div class="col-md-5">
           <div class="h3">{l s='Do you have an account?' d='Shop.Theme.Customeraccount'}</div>
           <br class="hidden-sm-down">
           <section class="login-form">
@@ -56,6 +64,7 @@
             {hook h='displayCustomerLoginFormAfter'}
           {/block}
         </div>
+      </div> 
       </div> 
     
     {/block}

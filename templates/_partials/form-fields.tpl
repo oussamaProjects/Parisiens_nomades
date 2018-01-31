@@ -36,7 +36,7 @@
         {$field.label}
       {/if}
     </label>
-    <div class="col-md-6{if ($field.type === 'radio-buttons')} form-control-valign{/if}">
+    <div class="col-md-9{if ($field.type === 'radio-buttons')} form-control-valign{/if}">
 
       {if $field.type === 'select'}
 
@@ -180,13 +180,13 @@
 
     </div>
 
-    <div class="col-md-3 form-control-comment">
+    {* <div class="col-md-3 form-control-comment">
       {block name='form_field_comment'}
         {if (!$field.required && !in_array($field.type, ['radio-buttons', 'checkbox']))}
          {l s='Optional' d='Shop.Forms.Labels'}
         {/if}
       {/block}
-    </div>
+    </div> *}
   </div>
 
 {/if}

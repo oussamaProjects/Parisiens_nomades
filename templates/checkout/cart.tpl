@@ -84,6 +84,10 @@
         </div>
       {/block}
 
+        <div class="clearfix"></div>
+<br>
+
+        <div class="clearfix"></div>
       {block name='hook_reassurance'}
         {hook h='displayReassurance'}
       {/block}

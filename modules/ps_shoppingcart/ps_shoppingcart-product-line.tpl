@@ -28,7 +28,6 @@
 </div>
 <div class="right_block">
 	<span class="product-name">{$product.name}</span>
-	<span class="product-price">{$product.price}</span>
 	<a  class="remove-from-cart"
 		rel="nofollow"
 		href="{$product.remove_from_cart_url}"
@@ -42,4 +41,5 @@
 		  <span><strong>{$property}</strong>: {$property_value}</span><br>
 		{/foreach}
 	</div>
+	<span class="product-price">{$product.price}</span>
 </div>

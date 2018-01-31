@@ -11,6 +11,7 @@
 @import "partials/_commons";
 @import "partials/_page-banner";
 @import "components/alert";
+@import "components/authentication";
 @import "components/drop-down";
 @import "components/search-widget";
 @import "components/mainmenu";
@@ -45,12 +46,7 @@
 #header {
   background: white;
   color: $gray;
-  // height: oe_rem(130px);
-  &.fixed{
-    z-index: 10;  
-    margin: 0; 
-    @include position(fixed, 0, 0, initial, 0);      
-  }
+  // height: oe_rem(130px); 
   .logo {
     max-width: 100%; 
   }
@@ -64,7 +60,7 @@
   .header-nav { 
     background: $gray-lighter; 
     padding: 0; 
-
+    position: relative;
     #menu-icon { 
       vertical-align: middle;
       cursor: pointer; 
@@ -136,7 +132,7 @@
       }
     } 
     .material-icons {
-      line-height: inherit;
+      line-height: initial;
       &.expand-more {
         margin-left: -0.375rem;
       }
@@ -289,16 +285,14 @@
     height: auto;
     .header-nav {
       height: auto;
-      background: white;
-      margin: oe_rem(10px) 0 oe_rem(32px);
-      color: $gray-darker;  
-      @include flex(stretch, flex-start, column);
-      padding: 0 oe_rem(10px); 
-    
+      &.fixed{
+        @include position(fixed, 0, 0, initial, 0);
+        z-index: 10;
+      }
       .top-logo {
         line-height: 50px;
         vertical-align: middle; 
-        margin: 0 auto;
+        margin-left: oe_rem(50px);
         text-align: center;
         @include position(absolute, initial, 0, initial, 0);
         width: oe_rem(150px);
@@ -311,6 +305,7 @@
       }
       .right-nav {
         flex-direction: column;
+        height: auto;
         #_desktop_contact_link{
           background: $gray-darker;
           margin: oe_rem(-10px) oe_rem(-15px) oe_rem(15px);
@@ -468,19 +463,6 @@
 @include media-breakpoint-down(xs) { 
   #_mobile_my_contact_link{
     display: none;
-  }
-}
-
-@include media("<lg"){
-  #header {  
-    .header-top { 
-      height: auto;
-      padding-bottom: oe_rem(50px);
-      #_desktop_top_menu{
-        @include position(absolute, oe_rem(80px), 0, initial, 0);
-        text-align: center;
-      } 
-    } 
   }
 }
 

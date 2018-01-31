@@ -45,10 +45,8 @@ p {
 h1,.h1,
 h2,.h2,
 h3,.h3 ,
-h4,.h4 {
-    font-family: $primary-font-family;
-    font-weight: initial;
-    text-transform: uppercase;
+h4,.h4 { 
+    font-weight: initial; 
     color: $gray-darker;
     margin-bottom: $small-space; 
     line-height: initial;
@@ -132,6 +130,7 @@ small.label, small.value {
 }
 .form-control-label { 
     padding-top: oe_rem(18px);
+    text-align: left;
 }
 
 .form-control {
@@ -641,11 +640,3 @@ input, textarea {
     cursor: default;
 }
 
-.mobile{
-    position: relative;
-    #_mobile_user_info{
-        position: absolute;
-        right: oe_rem(10px);
-        top: oe_rem(25px);
-    }
-}

@@ -41,7 +41,7 @@
 
           <!--  product top content: prix -->
           <div class="product-line-grid-prix"> 
-            <span>{l s='Prix untaire (TTC)' d='Shop.Theme.Checkout'}</span>
+            <span>{l s='Prix untaire' d='Shop.Theme.Checkout'}</span>
           </div> 
 
           <!--  product top content: actions -->

@@ -79,13 +79,12 @@
   @include media("<xl"){ 
     height: oe_rem(300px);
     overflow: hidden;
+    margin-bottom: oe_rem(30px);
     .carousel-inner {
       height: oe_rem(300px);
       .carousel-item{
         height: oe_rem(300px);
-        .caption {
-          left: 0%;
-          width: 50%;
+        .caption { 
           .caption-title{ 
             font-size: oe_rem(18px);
             line-height: oe_rem(30px); 
@@ -102,14 +101,13 @@
 
   @include media("<lg"){ 
     height: oe_rem(250px);
+    margin-bottom: oe_rem(25px);
     overflow: hidden;
     .carousel-inner {
       height: oe_rem(250px);
       .carousel-item{
         height: oe_rem(250px);
-        .caption {
-          left: 0%;
-          width: 50%;
+        .caption { 
           .caption-title{ 
             font-size: oe_rem(18px);
             line-height: oe_rem(30px); 
@@ -131,10 +129,7 @@
       height: auto;
       .carousel-item{
         height: auto;
-        .caption {
-          left: 0%;
-          width: 100%;
-
+        .caption { 
           .caption-title{ 
             font-size: oe_rem(16px);
             line-height: oe_rem(20px); 
@@ -144,6 +139,8 @@
             line-height: oe_rem(18px);
             p{
               margin-bottom: oe_rem(6px); 
+              font-size: oe_rem(40px);
+              line-height: oe_rem(45px);
             }
           }
         }

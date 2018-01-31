@@ -24,6 +24,7 @@
            text-transform: uppercase;
            text-shadow: 1px 1px 0px $gray-darker;
            margin-bottom: oe_rem(32px);
+           font-weight: 600;
        }
        .breadcrumb {
            background-color: transparent;
@@ -48,17 +49,7 @@
            }
        }
 
-    }
-    @include media("<lg"){     
-        .page_banner_wrapper{  
-            .titre{
-                color: $white;
-                font-size: oe_rem(24px);  
-                line-height: oe_rem(24px);
-                margin-bottom: oe_rem(20px);
-            }
-        }
-    }
+    } 
 
     @include media("<md"){    
         margin-top: 0;
@@ -67,9 +58,7 @@
         .page_banner_wrapper{ 
             padding: oe_rem(15px);
             .titre{ 
-                margin: 0;
-                font-size: oe_rem(20px);  
-                line-height: oe_rem(20px);  
+                margin: 0; 
             }
             .breadcrumb {
                 display: none;
