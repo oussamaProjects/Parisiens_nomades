@@ -31,7 +31,7 @@
     {/block}
   </head>
 
-  <body id="{$page.page_name}"  {if $page.page_name == 'authentication' or $page.page_name == "password"} style="background: url(http://127.0.0.1/Parisiens_nomades/themes/Parisiens_nomades/assets/img/authentication_bg.jpg) no-repeat 50% #c8ccb5;" {/if} class="{$page.body_classes|classnames}">
+  <body id="{$page.page_name}"  {if $page.page_name == 'authentication' or $page.page_name == "password"} style="background: url(http://127.0.0.1/Parisiens_nomades/themes/Parisiens_nomades/assets/img/authentication_bg.jpg) no-repeat 50% #c8ccb5;background-attachment: fixed;" {/if} class="{$page.body_classes|classnames}">
 
     {block name='hook_after_body_opening_tag'}
       {hook h='displayAfterBodyOpeningTag'}

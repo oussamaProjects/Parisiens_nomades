@@ -14,14 +14,11 @@
         .header-nav{
             display: none;
         }
-    } 
-    
+    }
     #wrapper{
-        padding: 0;
-        background: transparent;
-        @include flex(center, center, row);
-        @include position(absolute, 0, 0, 0, 0);
-        
+        background: transparent; 
+        box-shadow: none;
+        @include flex(center, center, row); 
         #page_banner{ 
             width: 100%;
             height: auto; 
@@ -66,8 +63,7 @@
             }
             
         }
-        .authentication_form,
-        .password_form{
+        .float_form{
             padding: oe_rem(45px) 0;
             background: rgba(255, 255, 255, .5);
             @include oe_box-shadow-light;
@@ -89,4 +85,11 @@
     }
     
     
+}
+
+#password{
+    #wrapper{ 
+        padding: 0;
+        @include position(absolute, oe_rem(60px), 0, 0, 0);
+    }
 }

@@ -8317,8 +8317,8 @@ input:active:-moz-placeholder, textarea:active:-moz-placeholder {
 
 #authentication #wrapper,
 #password #wrapper {
-  padding: 0;
   background: transparent;
+  box-shadow: none;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -8336,12 +8336,7 @@ input:active:-moz-placeholder, textarea:active:-moz-placeholder {
   -ms-flex-direction: row;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-          flex-direction: row;
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0; }
+          flex-direction: row; }
   #authentication #wrapper #page_banner,
   #password #wrapper #page_banner {
     width: 100%;
@@ -8408,30 +8403,32 @@ input:active:-moz-placeholder, textarea:active:-moz-placeholder {
       text-align: center;
       font-size: 1.5rem;
       font-weight: 600; }
-  #authentication #wrapper .authentication_form,
-  #authentication #wrapper .password_form,
-  #password #wrapper .authentication_form,
-  #password #wrapper .password_form {
+  #authentication #wrapper .float_form,
+  #password #wrapper .float_form {
     padding: 2.8125rem 0;
     background: rgba(255, 255, 255, 0.5);
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24); }
-    #authentication #wrapper .authentication_form .h3,
-    #authentication #wrapper .password_form .h3,
-    #password #wrapper .authentication_form .h3,
-    #password #wrapper .password_form .h3 {
+    #authentication #wrapper .float_form .h3,
+    #password #wrapper .float_form .h3 {
       font-weight: 600;
       font-size: 1.25rem;
       margin: 0;
       text-transform: uppercase; }
-    #authentication #wrapper .authentication_form #private_shop_message,
-    #authentication #wrapper .password_form #private_shop_message,
-    #password #wrapper .authentication_form #private_shop_message,
-    #password #wrapper .password_form #private_shop_message {
+    #authentication #wrapper .float_form #private_shop_message,
+    #password #wrapper .float_form #private_shop_message {
       display: none; }
 
 #authentication .footer-container,
 #password .footer-container {
   display: none; }
+
+#password #wrapper {
+  padding: 0;
+  position: absolute;
+  top: 3.75rem;
+  right: 0;
+  bottom: 0;
+  left: 0; }
 
 .dropdown {
   color: #9d9d9d; }

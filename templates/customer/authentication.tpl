@@ -38,7 +38,7 @@
 {block name='page_content'}
     {block name='login_form_container'}
  
-      <div class="authentication_form">
+      <div class="float_form">
       <div class="row">
         <div class="col-md-5 offset-md-1">
           <div class="h3">{l s='You do not have an account ?' d='Shop.Theme.Customeraccount'}</div>

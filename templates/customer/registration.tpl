@@ -25,15 +25,31 @@
 {extends file='page.tpl'}
 
 {block name='page_title'}
-  {l s='Create an account' d='Shop.Theme.Customeraccount'}
+  <div class="intro">
+    <div class="logo_container">
+      <img class="logo img-responsive" src="{$shop.logo}" alt="{$shop.name}">
+    </div>    
+    <div class="intro-titre">{l s='Grossiste & sourcing en produits de mode' d='Shop.Theme.Customeraccount'}</div>
+    <div class="intro-sous-titre">{l s='Site réservé aux professionnels' d='Shop.Theme.Customeraccount'}</div>
+  </div>
 {/block}
 
 {block name='page_content'}
     {block name='register_form_container'}
-      {$hook_create_account_top nofilter}
-      <section class="register-form">
-        <p>{l s='Already have an account?' d='Shop.Theme.Customeraccount'} <a href="{$urls.pages.authentication}">{l s='Log in instead!' d='Shop.Theme.Customeraccount'}</a></p>
-        {render file='customer/_partials/customer-form.tpl' ui=$register_form}
-      </section>
+      <div class="float_form">
+        {$hook_create_account_top nofilter}
+        <div class="container">
+          <div class="row">
+            <div class="col-md-10 offset-md-1">
+              <div class="container">
+                <section class="register-form">
+                  <p>{l s='Already have an account?' d='Shop.Theme.Customeraccount'} <a href="{$urls.pages.authentication}">{l s='Log in instead!' d='Shop.Theme.Customeraccount'}</a></p>
+                  {render file='customer/_partials/customer-form.tpl' ui=$register_form}
+                </section>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div
     {/block}
 {/block}
