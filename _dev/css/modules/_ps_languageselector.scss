@@ -2,17 +2,21 @@
    
    .language-selector{
       @include flex(center, flex-end, row);
-      padding: 0;
       margin: 0;
       li{
-         opacity: .5;
+         img{
+            opacity: .6;
+            transition: all .25s ease-in-out;
+         }
          &:hover{
             img{
-               outline: 1px solid $gray;
+               outline: 1px solid $gray-darker;
             }
          }
          &.current{
-            opacity: 1;
+            img{
+               opacity: 1;
+            }
          }
          &:nth-child(1){
             margin-right: oe_rem(8px);      
