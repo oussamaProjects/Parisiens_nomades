@@ -142,7 +142,7 @@
     }
   }
   .header-top {
-    height: oe_rem(90px); 
+    height: oe_rem(120px); 
     padding: 0;
     background-color: $white;
     @include flex(center, space-between, row);   
@@ -152,8 +152,7 @@
     > .container {
       position: relative;
     } 
-    #_desktop_logo{
-      height: 100%; 
+    #_desktop_logo{ 
       padding: 5px 0;
       @include flex(center, center, row);
       a{
@@ -165,8 +164,9 @@
 
       img{
         width: auto; 
-        max-height: 100%;
         display: block;
+        max-height: 100%;
+        max-width: oe_rem(420px);
       }
     }
     .menu {
@@ -366,9 +366,7 @@
       a[data-depth="0"] {
         color: $gray-darker;
       }
-      #_desktop_logo{
-        margin-right: auto;
-        height: 100%;
+      #_desktop_logo{ 
         @include flex(stretch, flex-start, column);
         a,
         img{
@@ -380,6 +378,7 @@
       }  
       .position-static {
         position: static;
+        margin-top: oe_rem(20px);
         @include flex(stretch, flex-start, column);
       }  
     }
