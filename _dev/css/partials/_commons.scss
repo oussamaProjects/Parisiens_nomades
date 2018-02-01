@@ -201,7 +201,7 @@ input, textarea {
     }
 }
 .form-control-select {
-    height: oe_rem(50px) !important; 
+    height: oe_rem(40px) !important; 
     -moz-appearance: none;
     -webkit-appearance: none;
     background: $gray-light url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAQAAAD9CzEMAAAAPklEQVR4Ae3TwREAEBQD0V/6do4SXPZg7EsBhsQ8IEmSMOsiuEfg3gL3oXC7wK0bd1G4o8X9F4yIkyQfSrIByQBjp7QuND8AAAAASUVORK5CYII=") no-repeat scroll right 0.5rem center / 1.25rem 1.25rem;
@@ -546,9 +546,9 @@ input, textarea {
         align-items: center; 
         width: 100%;
         color: $gray;
-        padding: oe_rem(10px);
-        height: oe_rem(50px);
-        line-height: oe_rem(50px);
+        padding: oe_rem(8px) oe_rem(10px);
+        height: oe_rem(40px);
+        line-height: oe_rem(40px);
         cursor: pointer;
        
     }

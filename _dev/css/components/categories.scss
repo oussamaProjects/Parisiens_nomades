@@ -355,12 +355,13 @@
     display: inline;
     margin-right: $small-space;
     font-weight: 600;
+    color: $black;
   }
   ul {
     display: inline;
   }
   .filter-block {
-    @include oe_box-shadow;
+    @include oe_box-shadow-light;
     color: $gray-darker;
     margin-right: $small-space; 
     background: white;

@@ -5,6 +5,7 @@
   margin: 0;
   &>li{
     float: left;
+    position: relative;
   }
   a{
     font-size: oe_rem(16px);
@@ -65,7 +66,7 @@
     left: 0;
     z-index: -1;
     overflow: hidden;
-    width: 100%;
+    width: oe_rem(275px);
     min-height: 0;
     max-height: 0; 
     opacity: .97; 
@@ -103,14 +104,17 @@
       &>li{ 
         flex: initial;
         overflow: hidden;
-        width: 50% !important;
-        max-height: oe_rem(300px);
-        margin-bottom: oe_rem(20px);
+        width: 100% !important;
+        max-height: oe_rem(300px); 
         padding: oe_rem(5px) oe_rem(15px) 0;
         .top-menu[data-depth="2"]{
-          @include flex(stretch, stretch, column);      
+          @include flex(stretch, stretch, column);  
+          &>li{   
+            padding: 0 oe_rem(10px);
+          }    
         }
       }
+      
     }
     
 

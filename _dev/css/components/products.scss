@@ -31,7 +31,7 @@
   }
   .title{
     color: $gray-dark;
-    font-family: $primary-font-family;
+    font-weight: 600;
     text-transform: uppercase;
     font-size: oe_rem(16px);
     padding: oe_rem(10px) 0;
@@ -185,16 +185,27 @@
   line-height: oe_rem(24px);
   color: $gray-darker;
   margin-bottom: 0;
-}
-.product-category-title{ 
-  font-size: oe_rem(18px);
-  line-height: oe_rem(24px);
   font-weight: 600;
+}
+.product-ref-title{ 
+  font-size: oe_rem(16px);
+  line-height: oe_rem(16px);
+  color: $gray;
+  font-style: italic;
+}
+
+.product-category-title{ 
+  font-size: oe_rem(16px);
+  line-height: oe_rem(24px);
   color: $gray;
 }
 .product-prices {
-  padding: $large-space 0 $medium-space;
+  padding: $medium-space 0;
+  margin: $small-space 0;
   @include flex(center, flex-start, row); 
+  border-color: $gray-light;
+  border-width: 1px 0 1px 0;
+  border-style: solid;
   .product-price { 
     font-size: oe_rem(36px); 
   }
@@ -429,8 +440,7 @@
         margin: oe_rem(10px) 0;
         font-size: oe_rem(18px); 
         line-height: oe_rem(26px); 
-        text-align: center;
-        font-family: $primary-font-family;
+        text-align: center; 
         text-transform: uppercase;
       }
       .product-price-and-shipping{
@@ -588,13 +598,14 @@ li.product-flag {
       }
     }
     &.new {
-      background: $color-success; 
-      color: white;
+      background: $color-success;  
       right: 0;
     } 
+    &.discount{
+      background: $color-danger;  
+    }
     &.on-sale {
-      background: $color-danger;
-      color: white;
+      background: $color-danger; 
       left:0;
     }
     &:not(.discount):not(.on-sale)~li.product-flag {

@@ -23,14 +23,15 @@
  * International Registered Trademark & Property of PrestaShop SA
  *}
 <div id="js-product-list-top" class="row products-selection">
-  <div class="col-md-6 hidden-sm-down total-products">
+  <div class="col-md-12 total-products">
     {if $listing.pagination.total_items > 1}
       <p>{l s='%product_count% produits' d='Shop.Theme.Catalog' sprintf=['%product_count%' => $listing.pagination.total_items]}</p>
     {else if $listing.pagination.total_items > 0}
       <p>{l s='1 produit' d='Shop.Theme.Catalog'}</p>
-    {/if}
+    {/if} 
   </div>
-  <div class="col-md-6 md-no-padding">
+  
+  {* <div class="col-md-6 md-no-padding">
     <div class="row sort-by-row"> 
 
       {block name='sort_by'}
@@ -52,5 +53,5 @@
     '%to%' => $listing.pagination.items_shown_to,
     '%total%' => $listing.pagination.total_items
     ]}
-  </div>
+  </div> *}
 </div>

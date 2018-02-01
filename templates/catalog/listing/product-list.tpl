@@ -31,14 +31,16 @@
       <!-- <h2 class="h2">{$listing.label}</h2> -->
     {*/block*}
 
+    {if $listing.products|count}
+      {block name='product_list_top'}
+        <div id="">
+          {include file='catalog/_partials/products-top.tpl' listing=$listing}
+        </div>
+      {/block}
+    {/if}
+    
     <section id="products" class="container">
-      {if $listing.products|count}
-
-        {block name='product_list_top'}
-          <div id="">
-            {include file='catalog/_partials/products-top.tpl' listing=$listing}
-          </div>
-        {/block}
+      {if $listing.products|count} 
 
         {block name='product_list_active_filters'}
           <div id="" class="hidden-sm-down">
