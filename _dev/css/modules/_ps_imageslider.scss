@@ -7,11 +7,13 @@
     height: oe_rem(415px);
     .carousel-item { 
       height: oe_rem(415px);
+      figure{
+        margin: 0;
         .caption {
           width: 100%;
           text-align: center;
           padding: oe_rem(20px); 
-          background: rgba($brand-slider, .8);
+          background: rgba($brand-slider, .6);
           @include position(absolute, 0, 0, 0, 0); 
           .caption-title{
             color: $white;
@@ -37,9 +39,10 @@
             }
           }
         } 
+      }
     } 
   }
-
+  
   ul.homeslider_tabs{
     list-style: none;
     padding: 0;
@@ -51,7 +54,7 @@
       width: oe_rem(10px);
       height: oe_rem(10px); 
       margin: 0 oe_rem(4px); 
-
+      
       a{ 
         background-color: transparent; 
         border: 1px solid $white;
@@ -71,11 +74,11 @@
           background-color: $white;
         }
       }
-
+      
     }
   }
- 
-
+  
+  
   @include media("<xl"){ 
     height: oe_rem(300px);
     overflow: hidden;
@@ -84,21 +87,23 @@
       height: oe_rem(300px);
       .carousel-item{
         height: oe_rem(300px);
-        .caption { 
-          .caption-title{ 
-            font-size: oe_rem(18px);
-            line-height: oe_rem(30px); 
-            margin-bottom: oe_rem(10px);
-          } 
-          .caption-description{
-            padding-bottom: 0; 
+        figure{
+          .caption { 
+            .caption-title{ 
+              font-size: oe_rem(18px);
+              line-height: oe_rem(30px); 
+              margin-bottom: oe_rem(10px);
+            } 
+            .caption-description{
+              padding-bottom: 0; 
+            }
           }
         }
       }
     }
     
   }
-
+  
   @include media("<lg"){ 
     height: oe_rem(250px);
     margin-bottom: oe_rem(25px);
@@ -107,21 +112,23 @@
       height: oe_rem(250px);
       .carousel-item{
         height: oe_rem(250px);
-        .caption { 
-          .caption-title{ 
-            font-size: oe_rem(18px);
-            line-height: oe_rem(30px); 
-            margin-bottom: oe_rem(10px);
-          } 
-          .caption-description{
-            padding-bottom: 0; 
+        figure{
+          .caption { 
+            .caption-title{ 
+              font-size: oe_rem(18px);
+              line-height: oe_rem(30px); 
+              margin-bottom: oe_rem(10px);
+            } 
+            .caption-description{
+              padding-bottom: 0; 
+            }
           }
         }
       }
     }
     
   }
-
+  
   @include media("<md"){ 
     height: auto;
     overflow: hidden;
@@ -129,28 +136,24 @@
       height: auto;
       .carousel-item{
         height: auto;
-        .caption { 
-          .caption-title{ 
-            font-size: oe_rem(16px);
-            line-height: oe_rem(20px); 
-          }
-          .caption-description{ 
-            font-size: oe_rem(14px);
-            line-height: oe_rem(18px);
-            p{
-              margin-bottom: oe_rem(6px); 
-              font-size: oe_rem(40px);
-              line-height: oe_rem(45px);
+        figure{
+          .caption { 
+            .caption-title{ 
+              font-size: oe_rem(16px);
+              line-height: oe_rem(20px); 
+            }
+            .caption-description{ 
+              font-size: oe_rem(14px);
+              line-height: oe_rem(18px);
+              p{
+                margin-bottom: oe_rem(6px); 
+                font-size: oe_rem(40px);
+                line-height: oe_rem(45px);
+              }
             }
           }
-        }
-
-        img{
-          height: oe_rem(210px);
-          width: auto;
-          max-width: none;
-        }
-
+        } 
+        
         .lien{ 
           font-size: oe_rem(12px);
           padding: oe_rem(6px) oe_rem(10px);  

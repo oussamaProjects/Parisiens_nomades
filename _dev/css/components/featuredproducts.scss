@@ -15,7 +15,7 @@
         &:before{
             content: "";
             @include position(absolute, 0, 0, 0, 0);
-            background-color: rgba($product-thumbnail-hover, .1);
+            background-color: rgba($product-thumbnail-hover, .3);
             z-index: 1;
             opacity: 0;
             transition: opacity .25s ease-in-out;
@@ -169,6 +169,7 @@
         max-width: 100%; 
         transition: all .3s; 
         opacity: 0;
+        display: none;
     }
 
     .product-description {

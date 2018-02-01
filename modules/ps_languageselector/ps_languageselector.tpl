@@ -26,7 +26,7 @@
   <div class="language-selector-wrapper"> 
     <div class=""> 
 
-      <ul class="hidden-sm-down language-selector" aria-labelledby="language-selector-label">
+      <ul class="language-selector" aria-labelledby="language-selector-label">
         {foreach from=$languages item=language}
           <li {if $language.id_lang == $current_language.id_lang} class="current" {/if}>
             <a href="{url entity='language' id=$language.id_lang}">
@@ -34,13 +34,8 @@
             </a>
           </li>
         {/foreach}
-      </ul>
-
-      <select class="link hidden-md-up" aria-labelledby="language-selector-label">
-        {foreach from=$languages item=language}
-          <option value="{url entity='language' id=$language.id_lang}"{if $language.id_lang == $current_language.id_lang} selected="selected"{/if}>{$language.name_simple}</option>
-        {/foreach}
-      </select>
+      </ul> 
+      
     </div>
   </div>
 </div>

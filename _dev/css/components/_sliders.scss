@@ -1,21 +1,22 @@
 
-#manufacturers_slider {
-   margin-bottom: oe_rem(40px);
-   
-   .manufacturer{
-      a{
-         height: oe_rem(170px);
-         background-color: $gray-lighter;
-         text-align: center;
-         @include flex(center, center, row);
-         img{
-            width: auto;
-            opacity: .7;
-            @include transition();
-         }
-         &:hover{
-            img{ 
-               opacity: 1; 
+#manufacturers {
+   margin: oe_rem(15px) 0 oe_rem(50px);
+   #manufacturers_slider {
+      opacity: .7;
+      @include transition();
+   }
+   &:hover{
+      img{  
+         .manufacturer{
+            a{
+               height: oe_rem(170px);
+               background-color: $gray-lighter;
+               text-align: center;
+               @include flex(center, center, row);
+               img{
+                  width: auto;
+                  opacity: 1; 
+               }
             }
          }
       }

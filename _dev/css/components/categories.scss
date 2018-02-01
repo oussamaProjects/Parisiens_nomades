@@ -67,12 +67,11 @@
   }
   @include media("<md"){
     .block-category-wrapper{
-    
       @include position(absolute, 0, 0, 0, 0);
       @include flex(flex-start, center, column);
       padding: oe_rem(65px);
       .titre{ 
-        font-size: oe_rem(18px);   
+        font-size: oe_rem(50px);   
         margin-bottom: 0;
       }
     }

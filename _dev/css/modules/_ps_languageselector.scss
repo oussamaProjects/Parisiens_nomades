@@ -24,4 +24,8 @@
       }
    }
 
+   @include media("<md"){
+      @include flex(center, center, row);
+   }
+
 }

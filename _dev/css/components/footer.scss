@@ -100,6 +100,7 @@
     padding: oe_rem(5px) oe_rem(15px);
     border: 1px solid $gray;
     display: none;
+    z-index: 9;
     border-radius: oe_rem(4px);
     a{
       display: block;
@@ -131,7 +132,7 @@
 .footer-container { 
   box-shadow: 0 0 3px rgba(0,0,0,0.24), 0 0 2px rgba(0,0,0,0.48); 
   padding-top: $extra-large-space;
-  overflow: hidden;
+  overflow: hidden; 
   background-color: $black; 
   .logo_white{
     max-width: 100%; 
@@ -176,6 +177,11 @@
       font-size: $base-font-size;
       padding: 0 oe_rem(4px);
     } 
+  }
+  @include media("<md"){
+    .logo_white{
+      text-align: center;
+    }
   }
 }
 
