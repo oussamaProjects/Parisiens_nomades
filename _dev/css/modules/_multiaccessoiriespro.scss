@@ -47,7 +47,7 @@
             .accessory_price{
                font-size: oe_rem(18px);
                color: $color-danger;
-               padding: 0 oe_rem(10px);
+               padding: 0 oe_rem(6px);
             }
             .control-label{
                font-size: oe_rem(14px);
@@ -226,14 +226,15 @@ span.forbidden_ordering{
    }
    .product-cover{ 
       .layer {
-         width: 45px;
-         height: 45px;
+         width: 55px !important;
+         height: 72px !important;
          .zoom-in {
             font-size: 24px;
          }
       }
       img{
          box-shadow: none;
+         width: initial !important;
       }
    }
    .accessories_table_price{

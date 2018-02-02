@@ -10614,17 +10614,25 @@ body#checkout {
 
 .detail-product-title {
   font-weight: initial;
-  font-size: 1.125rem;
-  line-height: 1.5rem;
+  font-size: 18px;
+  line-height: 24px;
   color: #292627;
   margin-bottom: 0;
-  font-weight: 600; }
+  font-weight: 600;
+  text-transform: uppercase; }
+  .detail-product-title p {
+    font-weight: initial;
+    font-size: 18px;
+    line-height: 24px;
+    color: #292627;
+    margin-bottom: 0;
+    font-weight: 600;
+    text-transform: uppercase; }
 
 .product-ref-title {
   font-size: 1rem;
   line-height: 1rem;
-  color: #9d9d9d;
-  font-style: italic; }
+  color: #9d9d9d; }
 
 .product-category-title {
   font-size: 1rem;
@@ -10660,26 +10668,6 @@ body#checkout {
   .product-prices .tax-shipping-delivery-label {
     font-size: 0.8125rem;
     color: #9d9d9d; }
-  @media (max-width: 767px) {
-    .product-prices {
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -moz-align-items: flex-start;
-      -ms-align-items: flex-start;
-      -webkit-box-align: start;
-          -ms-flex-align: start;
-              align-items: flex-start;
-      -moz-justify-content: flex-start;
-      -ms-justify-content: flex-start;
-      -webkit-box-pack: start;
-              justify-content: flex-start;
-      -ms-flex-pack: flex-start;
-      -moz-flex-direction: column;
-      -ms-flex-direction: column;
-      -webkit-box-orient: vertical;
-      -webkit-box-direction: normal;
-              flex-direction: column; } }
 
 .product-discount {
   color: #cccccc; }
@@ -11183,6 +11171,18 @@ li.product-flag {
     border-right: none; }
   #blockcart-modal .modal-body {
     padding: 1rem; } }
+
+#accessory_info .accessory_name {
+  color: #292627;
+  font-size: 1.125rem;
+  line-height: 3.125rem;
+  font-weight: 600; }
+
+#accessory_info .accessory_prices {
+  color: #e93d53;
+  font-size: 1.125rem;
+  color: #e93d53;
+  padding: 0 0.375rem; }
 
 .cart-block {
   padding: 1.5625rem 1.25rem;
@@ -12982,7 +12982,7 @@ textarea.form-control {
   #product #group_accessories .option-row .accessory_info .accessory_price {
     font-size: 1.125rem;
     color: #e93d53;
-    padding: 0 0.625rem; }
+    padding: 0 0.375rem; }
   #product #group_accessories .option-row .accessory_info .control-label {
     font-size: 0.875rem;
     line-height: 2.5rem;
@@ -13121,13 +13121,14 @@ span.forbidden_ordering {
   max-width: 820px; }
 
 #multiAccessoriesTab .product-cover .layer {
-  width: 45px;
-  height: 45px; }
+  width: 55px !important;
+  height: 72px !important; }
   #multiAccessoriesTab .product-cover .layer .zoom-in {
     font-size: 24px; }
 
 #multiAccessoriesTab .product-cover img {
-  box-shadow: none; }
+  box-shadow: none;
+  width: initial !important; }
 
 #multiAccessoriesTab .accessories_table_price {
   background: transparent !important; }

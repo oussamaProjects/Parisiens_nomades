@@ -83,7 +83,17 @@
 
         {block name='page_header_container'}
           {block name='page_header'}
-            <h1 class="detail-product-title" itemprop="name">{block name='page_title'}{$product.name}{/block}</h1>
+            <h1 class="detail-product-title" itemprop="name">
+              {block name='page_title'}
+              
+              {if $product.combname}
+                {$product.combname nofilter} 
+              {else}
+                {$product.name} 
+              {/if}
+              
+              {/block}
+            </h1>
             {if $product.reference}
               <div class="product-ref-title" >{l s='Ref' mod='product'}: {$product.reference}</div>
             {/if}
@@ -100,6 +110,10 @@
             <div id="product-description-short-{$product.id}" itemprop="description">{$product.description_short nofilter}</div>
           {/block}
 
+           {block name='hook_display_reassurance'}
+            {hook h='displayReassurance'}
+          {/block} 
+
           {if $product.is_customizable && count($product.customizations.fields)}
             {block name='product_customization'}
               {include file="catalog/_partials/product-customization.tpl" customizations=$product.customizations}
@@ -108,6 +122,40 @@
 
           <div class="product-actions">
             {block name='product_buy'}
+              <div id="accessory_info">
+                <span class="accessory_name">
+                  {$product.name}
+                </span> 
+                {if $product.show_price}
+                  <span class="accessory_prices">
+                    {block name='product_discount'}
+                      {if $product.has_discount}
+                        <span class="product-discount">
+                          {hook h='displayProductPriceBlock' product=$product type="old_price"}
+                          <span class="regular-price">{$product.regular_price}</span>
+                        </span>
+                      {/if}
+                    {/block}
+
+                    {block name='product_price'}
+                      <span
+                      class="accessory-price {if $product.has_discount}has-discount{/if}"
+                      itemprop="offers"
+                      itemscope
+                      itemtype="https://schema.org/Offer"
+                      >
+                        <link itemprop="availability" href="https://schema.org/InStock"/>
+                        <meta itemprop="priceCurrency" content="{$currency.iso_code}">
+
+                        <span class="accessory-price">
+                          <span itemprop="price" content="{$product.price_amount}">{$product.price}</span> 
+                        </span> 
+                      </span> 
+                    {/block}
+                  </span>
+                {/if}
+              </div>
+
               <form action="{$urls.pages.cart}" method="post" id="add-to-cart-or-refresh">
                 <input type="hidden" name="token" value="{$static_token}">
                 <input type="hidden" name="id_product" value="{$product.id}" id="product_page_product_id">
@@ -155,9 +203,7 @@
             {/block}
           </div>
 
-          {block name='hook_display_reassurance'}
-            {hook h='displayReassurance'}
-          {/block} 
+         
         </div>
       </div>
       

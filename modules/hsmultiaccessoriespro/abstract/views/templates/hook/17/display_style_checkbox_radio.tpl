@@ -33,7 +33,7 @@
     <tr class="clearfix"> 
         <div class="accessory_info">
             <a class="accessory_name" href="{$accessory.link|escape:'htmlall':'UTF-8'}" target="{if $accessory_configuration_keys.HSMA_OPEN_ACCESSORIES_IN_NEW_TAB}_blank{/if}" title="{$hs_i18n.click_to_view_details|strip_tags:'UTF-8'}">
-                {$accessory.name|escape:'htmlall':'UTF-8'}
+                <span id="has_accessory_name">{$accessory.name|escape:'htmlall':'UTF-8'}</span>
             </a>
             
             <span class="accessory_price">
@@ -73,14 +73,14 @@
         </td>
         {/if}
         {if $accessory_configuration_keys.HSMA_SHOW_IMAGES}
-        <td width="10%">
+        <td width="65px">
             <div class="hsma_images-container">
               
                 <div class="product-cover">
                   {if !$accessory_configuration_keys.HSMA_APPLY_FANCYBOX_TO_IMAGE}
                   <a href="{$accessory.link|escape:'htmlall':'UTF-8'}" target="_blank" class="product_img_link" title="{$accessory.name|escape:'htmlall':'UTF-8'}">
                       {/if}
-                      <img class="accessory_image hsma-js-qv-product-cover"  src="{$accessory.image|escape:'htmlall':'UTF-8'}" width="45" height="45" title="{$accessory.name|escape:'htmlall':'UTF-8'}" alt="{$accessory.name|escape:'htmlall':'UTF-8'}" itemprop="image">
+                      <img class="accessory_image hsma-js-qv-product-cover"  src="{$accessory.image|escape:'htmlall':'UTF-8'}" width="55" height="72" title="{$accessory.name|escape:'htmlall':'UTF-8'}" alt="{$accessory.name|escape:'htmlall':'UTF-8'}" itemprop="image">
                       {if !$accessory_configuration_keys.HSMA_APPLY_FANCYBOX_TO_IMAGE}
                   </a>
                   {/if}
