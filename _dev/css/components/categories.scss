@@ -65,11 +65,14 @@
       }
     } 
   }
+  @include media("<lg"){
+      margin: oe_rem(25px) 0; 
+  }
   @include media("<md"){
     .block-category-wrapper{
       @include position(absolute, 0, 0, 0, 0);
       @include flex(flex-start, center, column);
-      padding: oe_rem(65px);
+      padding: oe_rem(65px); 
       .titre{ 
         font-size: oe_rem(50px);   
         margin-bottom: 0;

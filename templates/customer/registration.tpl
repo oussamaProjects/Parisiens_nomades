@@ -38,16 +38,12 @@
     {block name='register_form_container'}
       <div class="float_form">
         {$hook_create_account_top nofilter}
-        <div class="container">
-          <div class="row">
-            <div class="col-md-10 offset-md-1">
-              <div class="container">
-                <section class="register-form">
-                  <p>{l s='Already have an account?' d='Shop.Theme.Customeraccount'} <a href="{$urls.pages.authentication}">{l s='Log in instead!' d='Shop.Theme.Customeraccount'}</a></p>
-                  {render file='customer/_partials/customer-form.tpl' ui=$register_form}
-                </section>
-              </div>
-            </div>
+        <div class="row">
+          <div class="col-xl-10 offset-xl-1">
+            <section class="register-form">
+              <p>{l s='Already have an account?' d='Shop.Theme.Customeraccount'} <a href="{$urls.pages.authentication}">{l s='Log in instead!' d='Shop.Theme.Customeraccount'}</a></p>
+              {render file='customer/_partials/customer-form.tpl' ui=$register_form}
+            </section>
           </div>
         </div>
       </div

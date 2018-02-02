@@ -68,7 +68,9 @@
     <li><a class="text-uppercase h4" href="{$categories.link nofilter}">{$categories.name}</a></li>
     <li>{categories nodes=$categories.children}
     <ul class="category-sub-menu" style="margin:0;">
-    <li data-depth="0"><a href="http://demo.comenscene.com/oussama/monarqueo/promotions">{l s='Promotions' d='Shop.Theme.Catalog'} </a></li>        
+    {* <li data-depth="0"><a href="http://demo.comenscene.com/oussama/monarqueo/promotions">{l s='Promotions' d='Shop.Theme.Catalog'} </a></li>    *}
+    <li data-depth="0"><a href="{url entity='price-drop'} ">{l s='Promotions' d='Shop.Theme.Catalog'} </a></li>   
+         
     </ul>
     </li>
   </ul> 

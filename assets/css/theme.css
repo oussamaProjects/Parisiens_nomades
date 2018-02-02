@@ -8407,7 +8407,7 @@ input:active:-moz-placeholder, textarea:active:-moz-placeholder {
       font-weight: 600; }
   #authentication #wrapper .float_form,
   #password #wrapper .float_form {
-    padding: 2.8125rem 0;
+    padding: 2.8125rem 0.9375rem;
     background: rgba(255, 255, 255, 0.5);
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 3px rgba(0, 0, 0, 0.12); }
     #authentication #wrapper .float_form .h3,
@@ -8423,6 +8423,29 @@ input:active:-moz-placeholder, textarea:active:-moz-placeholder {
 #authentication .footer-container,
 #password .footer-container {
   display: none; }
+
+@media (max-width: 991px) {
+  #authentication #wrapper .intro .intro-titre,
+  #password #wrapper .intro .intro-titre {
+    font-size: 1.5rem; }
+  #authentication #wrapper .intro .intro-sous-titre,
+  #password #wrapper .intro .intro-sous-titre {
+    font-size: 1.25rem; }
+  #authentication #wrapper .float_form,
+  #password #wrapper .float_form {
+    padding: 0.9375rem; } }
+
+@media (max-width: 767px) {
+  #authentication #wrapper .intro .intro-titre,
+  #password #wrapper .intro .intro-titre {
+    font-size: 1.5rem;
+    padding: 1.25rem 0 0; }
+  #authentication #wrapper .intro .intro-sous-titre,
+  #password #wrapper .intro .intro-sous-titre {
+    font-size: 1.25rem; }
+  #authentication #wrapper .float_form,
+  #password #wrapper .float_form {
+    padding: 0.9375rem; } }
 
 #password #wrapper {
   padding: 0;
@@ -9472,6 +9495,9 @@ body#checkout {
 
 .send-renew-password-link {
   margin-bottom: 2.5rem; }
+  @media (max-width: 767px) {
+    .send-renew-password-link {
+      margin-bottom: 1.25rem; } }
 
 .renew-password {
   margin-left: 10px; }
@@ -9804,6 +9830,9 @@ body#checkout {
             text-shadow: 1px 1px 0px #292627; }
           .block-category .block-category-wrapper .breadcrumb ol li::after {
             color: #fff !important; }
+  @media (max-width: 991px) {
+    .block-category {
+      margin: 1.5625rem 0; } }
   @media (max-width: 767px) {
     .block-category .block-category-wrapper {
       position: absolute;

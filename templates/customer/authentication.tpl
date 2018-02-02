@@ -40,7 +40,7 @@
  
       <div class="float_form">
       <div class="row">
-        <div class="col-md-5 offset-md-1">
+        <div class="col-lg-5 col-xl-5 offset-xl-1">
           <div class="h3">{l s='You do not have an account ?' d='Shop.Theme.Customeraccount'}</div>
           <br class="hidden-sm-down">
           <p>{l s='Saisissez votre adresse e-mail pour créer votre compte' d='Shop.Theme.Customeraccount'}</p>
@@ -50,11 +50,11 @@
               <i class="fa fa-angle-right" aria-hidden="true"></i>
             </a>
           </div>
-          <br class="hidden-md-up">
-          <hr class="hidden-md-up">
-          <br class="hidden-md-up">
+          <br class="hidden-lg-up">
+          <hr class="hidden-lg-up">
+          <br class="hidden-lg-up">
         </div>
-        <div class="col-md-5">
+        <div class="col-lg-5 col-xl-5">
           <div class="h3">{l s='Do you have an account?' d='Shop.Theme.Customeraccount'}</div>
           <br class="hidden-sm-down">
           <section class="login-form">

@@ -67,7 +67,7 @@
             
         }
         .float_form{
-            padding: oe_rem(45px) 0;
+            padding: oe_rem(45px) oe_rem(15px);
             background: rgba(255, 255, 255, .5);
             @include oe_box-shadow-light;
             .h3{
@@ -86,6 +86,41 @@
     .footer-container {
         display: none;
     }    
+
+    @include media("<lg"){
+        #wrapper{  
+            .intro{  
+                .intro-titre{ 
+                    font-size: oe_rem(24px);   
+                }
+                .intro-sous-titre{ 
+                    font-size: oe_rem(20px); 
+                }
+                
+            }
+            .float_form{
+                padding: oe_rem(15px);  
+            }
+        }
+    }
+
+    @include media("<md"){
+        #wrapper{  
+            .intro{  
+                .intro-titre{ 
+                    font-size: oe_rem(24px);  
+                    padding: oe_rem(20px) 0 0;  
+                }
+                .intro-sous-titre{ 
+                    font-size: oe_rem(20px);   
+                }
+                
+            }
+            .float_form{
+                padding: oe_rem(15px);  
+            }
+        }
+    }
 }
 
 #password{
