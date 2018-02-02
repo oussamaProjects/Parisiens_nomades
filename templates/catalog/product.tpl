@@ -84,7 +84,9 @@
         {block name='page_header_container'}
           {block name='page_header'}
             <h1 class="detail-product-title" itemprop="name">{block name='page_title'}{$product.name}{/block}</h1>
-            <div class="product-ref-title" >{l s='Ref' mod='product'}: {$product.reference}</div>
+            {if $product.reference}
+              <div class="product-ref-title" >{l s='Ref' mod='product'}: {$product.reference}</div>
+            {/if}
             <div class="product-category-title" >{block name='page_title'}{$product.category_name}{/block}</div>
           {/block}
         {/block}

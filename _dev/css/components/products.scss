@@ -95,8 +95,7 @@
     }
   }
 }
-.product-additional-info{
-  padding: oe_rem(15px) 0;
+.product-additional-info{ 
   @include flex(center, flex-start, row);
 }
 .product-quantity { 
