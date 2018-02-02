@@ -25,7 +25,17 @@
 <div class="images-container">
   {block name='product_cover'}
     <div class="product-cover">
-      <img class="js-qv-product-cover" src="{$product.cover.bySize.large_default.url}" alt="{$product.cover.legend}" title="{$product.cover.legend}" style="width:100%;" itemprop="image">
+      {if isset($product.images[1])}
+        <img
+        class="js-qv-product-cover"
+        src = "{$product.images[1].bySize.home_default.url}" 
+        alt="{$product.cover.legend}" title="{$product.cover.legend}" style="width:100%;" itemprop="image">
+      {else}
+        <img 
+        class="js-qv-product-cover" 
+        src="{$product.cover.bySize.large_default.url}" 
+        alt="{$product.cover.legend}" title="{$product.cover.legend}" style="width:100%;" itemprop="image">
+      {/if}
       <div class="layer hidden-sm-down" data-toggle="modal" data-target="#product-modal">
         <i class="material-icons zoom-in">add_circle</i>
       </div>
