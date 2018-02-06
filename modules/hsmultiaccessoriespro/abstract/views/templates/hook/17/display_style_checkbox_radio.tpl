@@ -105,11 +105,11 @@
                     </figcaption>
                 </figure>
                 <aside id="thumbnails_{$group.id_accessory_group}_{$accessory.id_accessory}" class="thumbnails js-thumbnails text-xs-center"></aside>
-            </div>
-        </div><!-- /.modal-content -->
-    </div><!-- /.modal-dialog -->
-</div><!-- /.modal -->
-{/if}
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+    {/if}
 </td>
 {/if}
 <td>
@@ -120,7 +120,29 @@
         {else if $accessory.is_available_for_order && $accessory_configuration_keys.HSMA_SHOW_ICON_OUT_OF_STOCK}
         <span class="forbidden_ordering" title="{$hs_i18n.out_of_stock|escape:'html':'UTF-8'}"></span>
         {/if} 
-        <div class="combination_{$group.id_accessory_group|escape:'htmlall':'UTF-8'}_{$accessory.id_accessory|escape:'htmlall':'UTF-8'}"></div>
+        <div class="hscombination">
+        <div class="combination combination_{$group.id_accessory_group|escape:'htmlall':'UTF-8'}_{$accessory.id_accessory|escape:'htmlall':'UTF-8'}"></div>
+
+        {if $accessory.attachments}   
+            {foreach from=$accessory.attachments item=attachment} 
+                <a class='attachment' data-toggle="modal" data-target="#hsattachementsModal" href="{url entity='attachment' params=['id_attachment' => $attachment.id_attachment]}">{$attachment.name}</a>
+                <div class="modal fade attachementsModal" id="hsattachementsModal" role="dialog">
+                    <div class="modal-dialog"> 
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <div class="modal-title">{l s='Size guide' d='hsmultiaccessoriespro'}</div>
+                        </div>
+                        <div class="modal-body">
+                            <img src="{url entity='attachment' params=['id_attachment' => $attachment.id_attachment]}" alt="">
+                        </div> 
+                    </div>
+                    </div>
+                </div>
+            {/foreach}  
+        {/if} 
+        </div>
+
         {if $accessory_configuration_keys.HSMA_SHOW_SHORT_DESCRIPTION}
         {*<a class="icon-info-sign tooltip accessories-btn" title="{l s='view detail' mod='hsmultiaccessoriespro'}">&nbsp;</a>*}
         <div class="tooltipster-content" style="display:none;">

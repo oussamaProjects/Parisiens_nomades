@@ -222,7 +222,7 @@ span.forbidden_ordering{
 }
 #multiAccessoriesTab{
    .modal-dialog{
-      max-width: 820px;
+      max-width: 350px !important;
    }
    .product-cover{ 
       .layer {
@@ -244,3 +244,9 @@ span.forbidden_ordering{
       }
    }
 }
+.hscombination{
+   @include flex(center, flex-start, row);
+   .combination{
+     padding-right: oe_rem(20px);
+   }
+ }

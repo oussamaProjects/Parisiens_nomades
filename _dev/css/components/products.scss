@@ -575,6 +575,33 @@
     }
   }
 }
+
+.attachment{
+  text-decoration: underline;
+  &:hover{
+  text-decoration: none;    
+  }
+}
+.attachementsModal{
+  .modal-dialog{
+    max-width: 350px !important;
+    .modal-content{
+      .modal-header{
+        .modal-title{
+          font-size: oe_rem(16px);
+          text-align: center;
+        }
+      }
+      .modal-body{
+        img{
+          display: block;
+          margin: 0 auto;
+        }
+      }
+    }
+  }
+}
+
 .product-flags {
   position: absolute;
   top: 0;
@@ -769,7 +796,7 @@ li.product-flag {
 }
 
 
-#accessory_info{
+#accessory_info{ 
   .accessory_name{
     color: $gray-darker;
     font-size: 1.125rem;

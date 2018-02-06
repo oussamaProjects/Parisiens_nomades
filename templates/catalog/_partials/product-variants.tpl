@@ -72,4 +72,25 @@
       {/if}
     </div>
   {/foreach}
+
+
+  {if $product.attachments}   
+      {foreach from=$product.attachments item=attachment} 
+          <a class='attachment' data-toggle="modal" data-target="#attachementsModal" href="{url entity='attachment' params=['id_attachment' => $attachment.id_attachment]}">{$attachment.name}</a>
+          <div class="modal fade attachementsModal" id="attachementsModal" role="dialog">
+              <div class="modal-dialog"> 
+              <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <div class="modal-title">{l s='Size guide' d='Shop.Theme.product'}</div>
+                  </div>
+                  <div class="modal-body">
+                      <img src="{url entity='attachment' params=['id_attachment' => $attachment.id_attachment]}" alt="">
+                  </div> 
+              </div>
+              </div>
+          </div>
+      {/foreach}  
+  {/if} 
+</div>  
 </div>

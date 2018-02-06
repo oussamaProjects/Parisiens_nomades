@@ -147,7 +147,7 @@
                       </span> 
                     {/block}
                   </span>
-                {/if}
+                {/if} 
               </div>
 
               <form action="{$urls.pages.cart}" method="post" id="add-to-cart-or-refresh">
@@ -228,17 +228,7 @@
                   role="tab"
                   aria-controls="product-details"
                   {if !$product.description} aria-selected="true"{/if}>{l s='Product Details' d='Shop.Theme.Catalog'}</a>
-              </li>
-              {if $product.attachments}
-                <li class="nav-item">
-                  <a
-                    class="nav-link"
-                    data-toggle="tab"
-                    href="#attachments"
-                    role="tab"
-                    aria-controls="attachments">{l s='Attachments' d='Shop.Theme.Catalog'}</a>
-                </li>
-              {/if}
+              </li> 
               {foreach from=$product.extraContent item=extra key=extraKey}
                 <li class="nav-item">
                   <a
@@ -268,24 +258,7 @@
                 {/block}
               </div>
 
-              {block name='product_attachments'}
-                {if $product.attachments}
-                <div class="attachments" id="attachments">
-                    <section class="product-attachments">
-                      <div class="h5 text-uppercase">{l s='Download' d='Shop.Theme.Actions'}</div>
-                      {foreach from=$product.attachments item=attachment}
-                        <div class="attachment">
-                          <div><a href="{url entity='attachment' params=['id_attachment' => $attachment.id_attachment]}">{$attachment.name}</a></div>
-                          <p>{$attachment.description}</p
-                          <a href="{url entity='attachment' params=['id_attachment' => $attachment.id_attachment]}">
-                            {l s='Download' d='Shop.Theme.Actions'} ({$attachment.file_size_formatted})
-                          </a>
-                        </div>
-                      {/foreach}
-                    </section>
-                  </div>
-                {/if}
-              {/block}
+             
 
               {foreach from=$product.extraContent item=extra key=extraKey}
                 <div class="{$extra.attr.class}" id="extra-{$extraKey}" {foreach $extra.attr as $key => $val} {$key}="{$val}"{/foreach}>

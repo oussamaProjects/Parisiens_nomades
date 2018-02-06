@@ -91,7 +91,8 @@ $(document).ready(() => {
      }  
   },1);
   
-  
  
+  $('#attachementsModal').modal('hide');
+  $('#hsattachementsModal').modal('hide');
 
 });
