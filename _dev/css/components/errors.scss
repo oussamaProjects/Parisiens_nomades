@@ -29,3 +29,8 @@
     }
   }
 }
+
+.layout-error{
+  @include flex(center, center, column);
+  @include position(absolute, 0, 0, 0, 0);
+}

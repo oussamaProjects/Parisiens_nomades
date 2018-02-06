@@ -85,13 +85,11 @@
           {block name='page_header'}
             <h1 class="detail-product-title" itemprop="name">
               {block name='page_title'}
-              
-              {if $product.combname}
-                {$product.combname nofilter} 
+              {if $product.combname && isset($product.combname)}
+                {$product.combname|strip_tags} 
               {else}
                 {$product.name} 
               {/if}
-              
               {/block}
             </h1>
             {if $product.reference}
@@ -109,10 +107,6 @@
           {block name='product_description_short'}
             <div id="product-description-short-{$product.id}" itemprop="description">{$product.description_short nofilter}</div>
           {/block}
-
-           {block name='hook_display_reassurance'}
-            {hook h='displayReassurance'}
-          {/block} 
 
           {if $product.is_customizable && count($product.customizations.fields)}
             {block name='product_customization'}
@@ -203,7 +197,9 @@
             {/block}
           </div>
 
-         
+          {block name='hook_display_reassurance'}
+            {hook h='displayReassurance'}
+          {/block} 
         </div>
       </div>
       

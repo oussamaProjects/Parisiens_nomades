@@ -42,7 +42,13 @@
       {/block} 
       <div class="product-description"> 
         {block name='product_name'}
-          <div class="product-title" itemprop="name"><a href="{$product.url}">{$product.name|truncate:30:'...'}</a></div>
+          <div class="product-title" itemprop="name"><a href="{$product.url}"> 
+              {if $product.combname and isset($product.combname)}
+                {$product.combname|strip_tags} 
+              {else}
+                {$product.name|truncate:30:'...'} 
+              {/if}
+          </a></div>
         {/block}
 
         {block name='product_price_and_shipping'}
