@@ -23,14 +23,13 @@
     }
     &.cart-item-body{
       border: 1px solid $gray-light;
-      padding: 2rem 1rem;
+      padding: 1rem;
       margin-top: -1px;
     }
     .product-line-grid{
       @include flex(flex-start, stretch, row);
       .product-line-grid-image{
         flex: 2;
-
       }
       .product-line-grid-description{
         flex: 4; 
@@ -40,7 +39,7 @@
         }
       }
       .product-line-grid-prix{
-        flex: 2;
+        flex: 2.5;
         text-align: center;
       }
       .product-line-grid-actions{

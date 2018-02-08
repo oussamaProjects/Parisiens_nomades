@@ -176,6 +176,7 @@
                   {include file='catalog/_partials/product-discounts.tpl'}
                 {/block}
 
+                
                 {block name='product_out_of_stock'}
                   <div class="product-out-of-stock">
                     {hook h='actionProductOutOfStock' product=$product}

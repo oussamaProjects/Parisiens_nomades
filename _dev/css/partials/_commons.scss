@@ -510,7 +510,7 @@ input, textarea {
 }
  
 .btn-white{
-    @include my-button-variant($white, $gray-darker, transparent, $gray-light, $white, $gray-light);
+    @include my-button-variant($white, $gray-darker, transparent, $white, $white, $white);
 }
 .btn-black,
 .btn-primary{
