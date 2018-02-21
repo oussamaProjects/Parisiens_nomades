@@ -90,9 +90,33 @@ $(document).ready(() => {
         collapse_cat_menu_2.trigger('click'); 
      }  
   },1);
-  
+
+
+  let currentPage = $(".top-menu .current");
+  let currentPageParent = currentPage.parents('li[data-depth="0"]'); 
+  let currentPageParent2 = currentPage.parents('li[data-depth="1"]'); 
+  if (currentPageParent != 'undefined') {
+    currentPageParent.addClass('current');
+  }
+  if (currentPageParent2 != 'undefined') {
+    currentPageParent2.addClass('current');
+  }
  
   $('#attachementsModal').modal('hide');
   $('#hsattachementsModal').modal('hide');
+
+  $(document).on( 'scroll', function(){
+ 
+    if ($(window).scrollTop() > 100) {
+        $('.GoToHeader').addClass('show');
+    } else {
+        $('.GoToHeader').removeClass('show');
+    }
+  });
+  
+  $('.GoToHeader').click(function(){
+    $('html').animate({scrollTop:0}, 'slow');
+    return false;
+  }); 
 
 });

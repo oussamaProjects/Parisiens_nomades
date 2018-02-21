@@ -24,7 +24,7 @@
  *}
 <section class="featured-products clearfix mt-3">
   <div class="products-section-title"> 
-      {l s='Vous aimerez aussi' d='Shop.Theme.Catalog'}
+      {l s='You will like also' d='Shop.Theme.Catalog'}
   </div>
   <div class="products">
       {foreach from=$products item="product"}

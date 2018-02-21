@@ -86,16 +86,22 @@
             <h1 class="detail-product-title" itemprop="name">
               {block name='page_title'}
               {if $product.combname && isset($product.combname)}
-                {$product.combname|strip_tags} 
+                {$product.combname|strip_tags}
               {else}
-                {$product.name} 
+                {$product.name}
               {/if}
               {/block}
             </h1>
             {if $product.reference}
               <div class="product-ref-title" >{l s='Ref' mod='product'}: {$product.reference}</div>
             {/if}
-            <div class="product-category-title" >{block name='page_title'}{$product.category_name}{/block}</div>
+            <div class="product-category-title" >
+              {block name='page_title'} 
+                {if isset($product_manufacturer->id)}
+                  {$product_manufacturer->name}
+                {/if}
+              {/block}
+            </div>
           {/block}
         {/block}
 
@@ -119,7 +125,7 @@
               <div id="accessory_info">
                 <span class="accessory_name">
                   {$product.name}
-                </span> 
+                </span>
                 {if $product.show_price}
                   <span class="accessory_prices">
                     {block name='product_discount'}
@@ -142,12 +148,12 @@
                         <meta itemprop="priceCurrency" content="{$currency.iso_code}">
 
                         <span class="accessory-price">
-                          <span itemprop="price" content="{$product.price_amount}">{$product.price}</span> 
-                        </span> 
-                      </span> 
+                          <span itemprop="price" content="{$product.price_amount}">{$product.price}</span>
+                        </span>
+                      </span>
                     {/block}
                   </span>
-                {/if} 
+                {/if}
               </div>
 
               <form action="{$urls.pages.cart}" method="post" id="add-to-cart-or-refresh">
@@ -176,15 +182,14 @@
                   {include file='catalog/_partials/product-discounts.tpl'}
                 {/block}
 
-                
                 {block name='product_out_of_stock'}
                   <div class="product-out-of-stock">
                     {hook h='actionProductOutOfStock' product=$product}
                   </div>
                 {/block}
 
-                {block name='product_add_to_cart'} 
-                      {include file='catalog/_partials/product-add-to-cart.tpl'} 
+                {block name='product_add_to_cart'}
+                      {include file='catalog/_partials/product-add-to-cart.tpl'}
                 {/block}
 
                 {block name='product_additional_info'}
@@ -200,14 +205,14 @@
 
           {block name='hook_display_reassurance'}
             {hook h='displayReassurance'}
-          {/block} 
+          {/block}
         </div>
       </div>
-      
-      <div class="col-md-12">
-        <div class="product-information"> 
 
-          {block name='product_tabs'} 
+      <div class="col-md-12">
+        <div class="product-information">
+
+          {block name='product_tabs'}
 
             <ul class="nav" style="display: none;" >
               {if $product.description}
@@ -229,7 +234,7 @@
                   role="tab"
                   aria-controls="product-details"
                   {if !$product.description} aria-selected="true"{/if}>{l s='Product Details' d='Shop.Theme.Catalog'}</a>
-              </li> 
+              </li>
               {foreach from=$product.extraContent item=extra key=extraKey}
                 <li class="nav-item">
                   <a
@@ -240,32 +245,32 @@
                     aria-controls="extra-{$extraKey}">{$extra.title}</a>
                 </li>
               {/foreach}
-            </ul> 
+            </ul>
 
               {block name='product_details'}
                 {include file='catalog/_partials/product-details.tpl'}
               {/block}
-              
+
               <div class="description product-information-content" id="description">
                 {block name='product_description'}
-                
+
                   {if $product.description}
-                  
+
                     <div class="title">{l s='Description' d='Shop.Theme.Catalog'}</div>
                     <div class="product-description">{$product.description nofilter}</div>
-                    
+
                   {/if}
 
                 {/block}
               </div>
 
-             
+
 
               {foreach from=$product.extraContent item=extra key=extraKey}
                 <div class="{$extra.attr.class}" id="extra-{$extraKey}" {foreach $extra.attr as $key => $val} {$key}="{$val}"{/foreach}>
                   {$extra.content nofilter}
                 </div>
-              {/foreach} 
+              {/foreach}
           {/block}
         </div>
       </div>

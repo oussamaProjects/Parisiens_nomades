@@ -177,6 +177,9 @@
       font-size: $base-font-size;
       padding: 0 oe_rem(4px);
     } 
+    a:hover{
+      color: $gray-darker;
+    }
   }
   @include media("<md"){
     .logo_white{

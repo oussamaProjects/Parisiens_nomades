@@ -116,9 +116,9 @@
 
 <div class="clearfix"></div>
 
-<div id="block-reassurance" class="block-reassurance block-reassurance-contact">  
+{* <div id="block-reassurance" class="block-reassurance block-reassurance-contact">   *}
 
-  <div class="block-reassurance-item col-md-4">
+  {* <div class="block-reassurance-item col-md-4">
     <i class="fa fa-map-marker" aria-hidden="true"></i>
     <div class="title">{l s='Adresse' d='Shop.Theme.Global'} </div>
     <div class="description">  
@@ -126,15 +126,15 @@
       <span>{$shop.address.address2}</span> <br>
       <span>{$shop.address.city}</span>  
     </div>
-  </div> 
+  </div>  *}
 
-  <div class="block-reassurance-item col-md-4">
+  {* <div class="block-reassurance-item col-md-4">
     <i class="fa fa-phone" aria-hidden="true"></i>
     <div class="title">{l s='Téléphone' d='Shop.Theme.Global'} </div>
     <div class="description"> 
       <span>{$shop.phone}</span> 
     </div>
-  </div> 
+  </div>  *}
 
   {* <div class="block-reassurance-item col-md-4">
     <i class="fa fa-fax" aria-hidden="true"></i>
@@ -144,19 +144,19 @@
     </div>
   </div>  *}
 
-  <div class="block-reassurance-item col-md-4">
+  {* <div class="block-reassurance-item col-md-4">
     <i class="fa fa-envelope" aria-hidden="true"></i>
     <div class="title">{l s='E-mail' d='Shop.Theme.Global'} </div>
     <div class="description">{$shop.email}</div>
-  </div>
+  </div> *}
 
-  <div class="clearfix"></div>
+  {* <div class="clearfix"></div> *}
 
-</div>
+{* </div> *}
 
-<div class="col-md-12"> 
+{* <div class="col-md-12"> 
   <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d809.1851779268424!2d-5.843881170759447!3d35.781745086732144!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzXCsDQ2JzU0LjMiTiA1wrA1MCczNi4wIlc!5e0!3m2!1sfr!2s!4v1516188011482" width="100%" height="320" frameborder="0" style="border:0" allowfullscreen></iframe>
-</div> 
+</div>  *}
 <div class="col-md-12"> 
 <br>
 <br>

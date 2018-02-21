@@ -38,7 +38,7 @@
           <th>{l s='Order reference' d='Shop.Theme.Checkout'}</th>
           <th>{l s='Date' d='Shop.Theme.Checkout'}</th>
           <th>{l s='Total price' d='Shop.Theme.Checkout'}</th>
-          <th class="hidden-md-down">{l s='Payment' d='Shop.Theme.Checkout'}</th>
+
           <th class="hidden-md-down">{l s='Status' d='Shop.Theme.Checkout'}</th>
           <th>{l s='Invoice' d='Shop.Theme.Checkout'}</th>
           <th>&nbsp;</th>
@@ -50,7 +50,7 @@
             <th scope="row">{$order.details.reference}</th>
             <td>{$order.details.order_date}</td>
             <td class="text-xs-right">{$order.totals.total.value}</td>
-            <td class="hidden-md-down">{$order.details.payment}</td>
+          
             <td>
               <span
                 class="label label-pill {$order.history.current.contrast}"

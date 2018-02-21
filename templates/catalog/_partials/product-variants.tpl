@@ -26,7 +26,7 @@
   {foreach from=$groups key=id_attribute_group item=group}
     <div class="clearfix product-variants-item">
       {* <span class="control-label">{$group.name}</span> *}
-      
+
       {if $group.group_type == 'color'}
 
       <div class="product-variants-item-content oe_dropdown_menu">
@@ -74,11 +74,11 @@
   {/foreach}
 
 
-  {if $product.attachments}   
-      {foreach from=$product.attachments item=attachment} 
+  {if $product.attachments}
+      {foreach from=$product.attachments item=attachment}
           <a class='attachment' data-toggle="modal" data-target="#attachementsModal" href="{url entity='attachment' params=['id_attachment' => $attachment.id_attachment]}">{$attachment.name}</a>
           <div class="modal fade attachementsModal" id="attachementsModal" role="dialog">
-              <div class="modal-dialog"> 
+              <div class="modal-dialog">
               <div class="modal-content">
                   <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
@@ -86,11 +86,10 @@
                   </div>
                   <div class="modal-body">
                       <img src="{url entity='attachment' params=['id_attachment' => $attachment.id_attachment]}" alt="">
-                  </div> 
+                  </div>
               </div>
               </div>
           </div>
-      {/foreach}  
-  {/if} 
-</div>  
+      {/foreach}
+  {/if}
 </div>

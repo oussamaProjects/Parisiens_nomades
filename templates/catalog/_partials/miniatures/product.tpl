@@ -94,9 +94,9 @@
           <a class="product-link" href="{$product.url}">
             <i class="material-icons search">&#xE8B6;</i> 
           </a>
-          <a class="quick-view product-link" href="#" data-link-action="quickview">
+          {* <a class="quick-view product-link" href="#" data-link-action="quickview">
             <i class="material-icons cart">&#xE8CC;</i>
-          </a>
+          </a> *}
           {* <a class="product-link" href="#">
             <i class="material-icons favorite">&#xE87E;</i>
           </a> *}

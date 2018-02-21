@@ -396,11 +396,12 @@
     .category-sub-link{
       font-size: $base-font-size;
       display: block;
-      &.active {
-        font-weight: 600;
-        color: #000;
-        text-decoration: underline;
-      }
+       
+    }
+    a.active {
+      font-weight: 600;
+      color: #000;
+      text-decoration: underline;
     }
     li{
       position: relative;

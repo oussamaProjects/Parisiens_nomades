@@ -1,22 +1,6 @@
 <div class="product-details product-information-content" id="product-details" data-product="{$product.embedded_attributes|json_encode}">
   <div class="title">{l s='Composition et détails' d='Shop.Theme.Catalog'}</div>
   {block name='product_reference'}
-    {if isset($product_manufacturer->id)}
-      <div class="product-manufacturer">
-        {if isset($manufacturer_image_url)}
-          <a href="{$product_brand_url}">
-            <img src="{$manufacturer_image_url}" class="img img-thumbnail manufacturer-logo" alt="{$product_manufacturer->name}">
-          </a>
-        {else}
-          <ul>
-            <li>
-              {l s='Brand' d='Shop.Theme.Catalog'}: 
-              <span><a href="{$product_brand_url}">{$product_manufacturer->name}</a></span>
-            </li>
-          </ul>
-        {/if}
-      </div>
-    {/if}
     {* {if isset($product.reference_to_display)}
       <ul class="product-reference">
         <li>

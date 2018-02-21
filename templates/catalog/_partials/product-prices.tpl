@@ -24,14 +24,14 @@
  *}
 {if $product.show_price}
   <div class="product-prices">
-    {block name='product_discount'}
+    {* {block name='product_discount'}
       {if $product.has_discount}
         <div class="product-discount">
           {hook h='displayProductPriceBlock' product=$product type="old_price"}
           <span class="regular-price">{$product.regular_price}</span>
         </div>
       {/if}
-    {/block}
+    {/block} *}
 
     {block name='product_price'}
       <div

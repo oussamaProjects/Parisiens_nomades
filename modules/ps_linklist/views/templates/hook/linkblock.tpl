@@ -35,7 +35,7 @@
 
 {foreach $linkBlocks as $linkBlock}
 <div class="col-lg-2 col-md-6 col-xs-12 menu-footer">
-  <div class="ul_title">{$linkBlock.title}</div>
+  {* <div class="ul_title">{$linkBlock.title}</div> *}
   {assign var=_expand_id value=10|mt_rand:100000} 
   <ul class="ul_footer">
       {foreach $linkBlock.links as $link}

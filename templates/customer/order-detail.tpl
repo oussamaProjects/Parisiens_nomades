@@ -50,7 +50,7 @@
             <div class="clearfix"></div>
           </div>
       </div>
-
+<!--
       <div class="box">
           <ul>
             <li><strong>{l s='Carrier' d='Shop.Theme.Checkout'}</strong> {$order.carrier.name}</li>
@@ -75,7 +75,7 @@
               <li>{l s='Message' d='Shop.Theme.Customeraccount'} {$order.details.gift_message nofilter}</li>
             {/if}
           </ul>
-      </div>
+      </div> -->
     </div>
   {/block}
 

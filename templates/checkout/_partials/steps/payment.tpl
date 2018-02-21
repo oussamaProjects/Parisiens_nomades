@@ -21,7 +21,7 @@
                 name="payment-option"
                 type="radio"
                 required
-                {if $selected_payment_option == $option.id || $is_free} checked {/if}
+                {if $selected_payment_option == $option.id || $is_free || $option.id=='payment-option-1'} checked {/if}
               >
               <span></span>
             </span>

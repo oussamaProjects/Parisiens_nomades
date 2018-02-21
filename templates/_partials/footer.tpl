@@ -67,16 +67,18 @@
   <div class="footer-bas"> 
     {block name='copyright_link'}
       <span>
-       {l s='%copyright% %year% Parisiens Nomades Tous droits réservés' sprintf=['%year%' => 'Y'|date, '%copyright%' => '©'] d='Shop.Theme.Global'} 
+       {l s='%copyright% %year% Parisiens Nomades All rights reserved' sprintf=['%year%' => 'Y'|date, '%copyright%' => '©'] d='Shop.Theme.Global'} 
       </span>
       <span class="sprt"> - </span>
-      <a class="_blank" href="{url entity='cms' id=2 }">
-        {l s='Mentions légales' d='Shop.Theme.Global'}
+      <a class="_blank" href="{url entity='cms' id=5 }">
+        {l s='Legal Notice' d='Shop.Theme.Global'}
       </a>
       <span class="sprt"> - </span>
       <a class="_blank" href="https://comenscene.com/" target="_blank" rel="nofollow">
-        {l s='Réalisation Com en Scène' d='Shop.Theme.Global'} 
+        {l s='Created by Com en Scène' d='Shop.Theme.Global'} 
       </a> 
     {/block} 
   </div> 
 </div>
+
+<div><a href="#GoToHeader" class="GoToHeader"> <i class="fa fa-angle-up"></i></a></div>

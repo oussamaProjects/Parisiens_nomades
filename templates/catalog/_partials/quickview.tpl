@@ -49,8 +49,8 @@
           {block name='product_description_short'}
             <div id="product-description-short" itemprop="description">{$product.description_short nofilter}</div>
           {/block}
-          {block name='product_buy'}
-            <div class="product-actions">
+          <div class="product-actions">
+            {block name='product_buy'}
               <form action="{$urls.pages.cart}" method="post" id="add-to-cart-or-refresh">
                 <input type="hidden" name="token" value="{$static_token}">
                 <input type="hidden" name="id_product" value="{$product.id}" id="product_page_product_id">
@@ -66,9 +66,13 @@
                 {block name='product_refresh'}
                   <input class="product-refresh" data-url-update="false" name="refresh" type="submit" value="{l s='Refresh' d='Shop.Theme.Actions'}" hidden>
                 {/block}
-            </form>
+              </form>
+            {/block}
           </div>
-        {/block}
+          
+          {* {block name='hook_display_reassurance'}
+            {hook h='displayReassurance'}
+          {/block} *}
         </div>
       </div>
      </div>

@@ -61,6 +61,7 @@ global_settings:
       - ps_bestsellers
       - ps_newproducts
       - editorial
+      - ps_categoryproducts
   hooks:
     modules_to_hook:
       displayTop:
