@@ -3,10 +3,11 @@
     {if $nodes|count}
       <ul class="top-menu {if $depth == 1}container{/if}" {if $depth == 0}id="top-menu" {/if}  data-depth="{$depth}">
         {foreach from=$nodes item=node}
-            <li data-depth="{$depth}" class="{$node.type}{if $node.current} current {/if}" id="{$node.page_identifier}">
+          {assign var="nodeLabel" value=$node.label|lower}
+            <li data-depth="{$depth}" class="{$node.type}{if $node.current || $nodeLabel == $page.page_name} current {/if} {$page.page_name}" id="{$node.page_identifier}">
             {assign var=_counter value=$_counter+1}
               <a
-                class="{if $depth >= 0}dropdown-item{/if}{if $depth === 1} dropdown-submenu{/if}"
+                class="{if $node.type == 'cms-category'}disable{elseif $node.label == 'Les créations'}disable_mobile{/if} {if $depth >= 0}dropdown-item{/if}{if $depth === 1} dropdown-submenu{/if}"
                 href="{$node.url}" data-depth="{$depth}"
                 {if $node.open_in_new_window} target="_blank" {/if}
               >
@@ -21,6 +22,7 @@
                   </span>
                 {/if}
                 {$node.label}
+                {* {$node.label|escape:htmlall:'UTF-8'|replace:'é':'e'} *}
               </a>
               {if $node.children|count}
               <div {if $depth === 0} class="popover sub-menu js-sub-menu collapse"{else} class="collapse"{/if} id="top_sub_menu_{$_expand_id}">

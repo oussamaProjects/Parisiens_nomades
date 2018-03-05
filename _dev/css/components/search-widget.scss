@@ -3,8 +3,7 @@
   padding-right: oe_rem(15px);
   margin: 0;
   max-width: 100%;
-  @include search-box;  
- 
+  @include search-box;   
 }
 .header-top {
   .search-widget {

@@ -53,11 +53,12 @@
     @include media("<md"){    
         margin-top: 0;
         margin-bottom: oe_rem(20px); 
-        min-height: oe_rem(60px);
+        min-height: oe_rem(90px);
         .page_banner_wrapper{ 
             padding: oe_rem(15px);
             .titre{ 
                 margin: 0; 
+                font-size: oe_rem(40px);  
             }
             .breadcrumb {
                 display: none;

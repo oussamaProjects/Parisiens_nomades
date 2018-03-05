@@ -46,7 +46,7 @@
           <p>{l s='Saisissez votre adresse e-mail pour créer votre compte' d='Shop.Theme.Customeraccount'}</p>
           <div class="no-account">
             <a href="{$urls.pages.register}" data-link-action="display-register-form" class="btn btn-black">
-              {l s='S\'inscrire' d='Shop.Theme.Customeraccount'}
+              {l s='Register' d='Shop.Theme.Customeraccount'}
               <i class="fa fa-angle-right" aria-hidden="true"></i>
             </a>
           </div>

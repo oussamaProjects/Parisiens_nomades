@@ -29,6 +29,7 @@ $(document).ready(function () {
   createInputFile();
   coverImage();
   imageScrollBox();
+  imagesZoom();
 
   prestashop.on('updatedProduct', function (event) {
     createInputFile();
@@ -118,4 +119,26 @@ $(document).ready(function () {
       return false;
     });
   }
+
+
+
+  function imagesZoom(){ 
+    
+    $("#img_01").ezPlus({
+      gallery: 'gal1',
+      cursor: 'pointer',
+      galleryActiveClass: "active",
+      imageCrossfade: true,
+      scrollZoom: true,
+      loadingIcon: "https://www.elevateweb.co.uk/spinner.gif"
+    });
+    $("#img_01").bind("click", function (e) {
+        var ez = $('#img_01').data('ezPlus');
+        ez.closeAll(); //NEW: This function force hides the lens, tint and window
+        $.fancyboxPlus(ez.getGalleryList());
+        return false;
+    });
+
+  }
+
 });

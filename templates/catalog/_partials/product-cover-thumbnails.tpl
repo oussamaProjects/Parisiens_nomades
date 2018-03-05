@@ -25,7 +25,7 @@
 <div class="images-container">
   {block name='product_cover'}
     <div class="product-cover">
-      {if isset($product.images[1])}
+      {* {if isset($product.images[1])}
         <img
         class="js-qv-product-cover"
         src = "{$product.images[1].bySize.home_default.url}" 
@@ -38,12 +38,43 @@
       {/if}
       <div class="layer hidden-sm-down" data-toggle="modal" data-target="#product-modal">
         <i class="material-icons zoom-in">add_circle</i>
-      </div>
+      </div> *} 
+        {if isset($product.images[1])} 
+          <img 
+          id="img_01" 
+          src="{$product.images[1].bySize.home_default.url}" 
+          data-zoom-image="{$product.images[1].bySize.large_default.url}" 
+          alt="{$product.cover.legend}" 
+          title="{$product.cover.legend}" 
+          style="width:100%;" />
+        {else}    
+          <img 
+          id="img_01" 
+          src="{$product.cover.bySize.home_default.url}" 
+          data-zoom-image="{$product.cover.bySize.large_default.url}" 
+          alt="{$product.cover.legend}" 
+          title="{$product.cover.legend}" 
+          style="width:100%;" />
+        {/if}
+
+        <div id="gal1">
+          {foreach from=$product.images item=image}
+            <a href="#" data-image="{$image.bySize.home_default.url}" data-zoom-image="{$image.bySize.large_default.url}">
+              <img   
+              id="img_01"
+              class="thumb {if $image.id_image == $product.cover.id_image} selected {/if}" 
+              src="{$image.bySize.small_default.url}"
+              alt="{$image.legend}"
+              title="{$image.legend}"
+              width="100" />
+            </a>
+          {/foreach}
+        </div> 
     </div>
   {/block}
 
   {block name='product_images'}
-    <div class="js-qv-mask mask">
+    {* <div class="js-qv-mask mask">
       <ul class="product-images js-qv-product-images">
         {foreach from=$product.images item=image}
           <li class="thumb-container">
@@ -60,7 +91,7 @@
           </li>
         {/foreach}
       </ul>
-    </div>
+    </div> *}
 
     {* {$image|var_dump} *}
   

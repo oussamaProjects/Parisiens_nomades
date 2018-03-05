@@ -1,5 +1,5 @@
 <div class="product-details product-information-content" id="product-details" data-product="{$product.embedded_attributes|json_encode}">
-  <div class="title">{l s='Composition et détails' d='Shop.Theme.Catalog'}</div>
+  <div class="title">{l s='Compositions and details' d='Shop.Theme.Catalog'}</div>
   {block name='product_reference'}
     {* {if isset($product.reference_to_display)}
       <ul class="product-reference">
@@ -12,14 +12,14 @@
   {/block}
 
   {block name='product_quantities'}
-    {* {if $product.show_quantities}
-      <ul class="product-quantities">
+    {if $product.show_quantities}
+      <ul class="product-quantities" style="display:none;">
         <li>
           {l s='In stock' d='Shop.Theme.Catalog'}: 
           <span data-stock="{$product.quantity}" data-allow-oosp="{$product.allow_oosp}">{$product.quantity} {$product.quantity_label}</span>
         </li>
       </ul>
-    {/if} *}
+    {/if}
   {/block}
 
   {block name='product_features'}

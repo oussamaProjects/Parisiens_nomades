@@ -134,12 +134,12 @@
     border-radius: 0;
   }
 
-  @include media("<lg"){
+  @include media("<lg"){ 
     margin: 0; 
     a[data-depth="0"] { 
       height: oe_rem(60px);
       line-height: oe_rem(60px);  
-      font-size:oe_rem(15px); 
+      font-size:oe_rem(13px); 
     }
   }
 }
@@ -155,13 +155,10 @@
   margin-top: 0;
 }
 
-#mobile_top_menu_wrapper { 
-  margin-top: 2px;
-  padding: oe_rem(10px) 0;
+#mobile_top_menu_wrapper {  
   background: white;
-  overflow-y: scroll;
-  height: oe_rem(500px); 
-  @include position(absolute, 100%, 0, 0, 0);
+  overflow-y: scroll; 
+  @include position(fixed, oe_rem(135px), 0, oe_rem(10px), 0);
   #top-menu {
     margin-bottom: oe_rem(10px);
   }

@@ -24,7 +24,7 @@
 	*}
 
 	<!-- Module Editorial -->
-	{if $editorial->body_title && $editorial->body_paragraph}
+	{if $editorial->body_paragraph}
 	<div class="row">
 		<div class="col-md-12">
 

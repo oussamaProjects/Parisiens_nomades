@@ -24,14 +24,14 @@
  *}
 {if $product.show_price}
   <div class="product-prices">
-    {* {block name='product_discount'}
+    {block name='product_discount'}
       {if $product.has_discount}
         <div class="product-discount">
           {hook h='displayProductPriceBlock' product=$product type="old_price"}
           <span class="regular-price">{$product.regular_price}</span>
         </div>
       {/if}
-    {/block} *}
+    {/block}
 
     {block name='product_price'}
       <div
@@ -101,13 +101,18 @@
 
     {block name='product_availability'}
       <span id="product-availability">
-        {if $product.show_availability && $product.availability_message}
+      {* {$product.show_availability}
+      {$product.availability_message}
+      {$product.availability} *}
+        {if $product.show_availability}
           {if $product.availability == 'available'}
             <i class="material-icons product-available">fiber_manual_record</i>
             {l s='available' d='Shop.Theme.Catalog'}
           {elseif $product.availability == 'last_remaining_items'}
             {* <i class="material-icons product-last-items">fiber_manual_record</i>
-            {l s='last_remaining_items' d='Shop.Theme.Catalog'} *}
+            {l s='last_remaining_items' d='Shop.Theme.Catalog'} *} 
+            <i class="material-icons product-available">fiber_manual_record</i>
+            {l s='available' d='Shop.Theme.Catalog'}
           {else}
             <i class="material-icons product-unavailable">fiber_manual_record</i>
             {l s='unavailable' d='Shop.Theme.Catalog'}

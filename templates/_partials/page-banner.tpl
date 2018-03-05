@@ -7,11 +7,19 @@ and $page.page_name != 'cart'
 and $page.page_name != 'product'
 and $page.page_name != 'category'
 and $page.page_name != 'manufacturer'
-
+and $page.page_name != 'my-account'
+and $page.page_name != 'identity'
+and $page.page_name != 'address'
+and $page.page_name != 'addresses'
+and $page.page_name != 'history'
+and $page.page_name != 'order-detail' 
 }
   <div class="col-md-12">
-    <div id="page_banner">
-      <img src="{$urls.img_url}img_{$page.page_name}.jpg" alt="">
+    <div id="page_banner"> 
+      {assign var="img_src" value="{$smarty.current_dir}/../../assets/img/img_{$page.page_name}.jpg"}
+      {if file_exists($img_src)}
+        <img src="{$urls.img_url}img_{$page.page_name}.jpg" alt=""> 
+      {/if} 
       <div class="page_banner_wrapper">
 
          {block name='page_header_container'}
@@ -38,8 +46,7 @@ and $page.page_name != 'manufacturer'
                   </div>
                 {else}
                   <div class="titre cms">
-                    {block name='page_title'}
-                    
+                    {block name='page_title'} 
                     {$page.meta.title} {/block}
                   </div>
                 {/if}
@@ -55,5 +62,20 @@ and $page.page_name != 'manufacturer'
 
    </div>
   </div>
-  <div class="clearfix"></div>
+{elseif $page.page_name == 'my-account'
+or $page.page_name == 'identity'
+or $page.page_name == 'address'
+or $page.page_name == 'addresses'
+or $page.page_name == 'history'
+or $page.page_name == 'order-detail' }
+  
+  {block name='breadcrumb'}
+  
+  <div class="col-md-12">
+    {include file='_partials/breadcrumb.tpl'}
+  </div>
+  {/block}
 {/if}
+
+<div class="clearfix"></div>
+  

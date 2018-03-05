@@ -52,6 +52,13 @@
   background: white;
   color: $gray;
   // height: oe_rem(130px); 
+
+  &.fixed{
+    .header-nav{
+      @include position(fixed, 0, 0, initial, 0);
+      z-index: 999; 
+    }
+  }
   .logo {
     max-width: 100%; 
   }
@@ -165,7 +172,7 @@
         width: auto; 
         display: block;
         max-height: 100%;
-        max-width: oe_rem(420px);
+        max-width: oe_rem(380px);
       }
     }
     .menu {
@@ -181,6 +188,14 @@
       margin-top: $medium-space;
       @include flex(center, space-between, row); 
     } 
+    @include media("<xl"){
+      #_desktop_logo{  
+        
+        img{ 
+          max-width: oe_rem(300px);
+        }
+      }
+    }
   }
   .top-menu-link {
     margin-left: $medium-space;
@@ -246,7 +261,8 @@
     margin-bottom: 1.563rem;
   }
   .page-content {
-    margin-bottom: 1.563rem;
+    margin-bottom: 1.563rem;    
+    min-height: 330px;
     h6 {
       margin-bottom: 1.125rem;
     }
@@ -322,12 +338,12 @@
         z-index: 10;
       }
       .top-logo {
-        line-height: 50px;
+        line-height: 42px;
         vertical-align: middle; 
         margin-left: oe_rem(50px);
         text-align: center;
         @include position(absolute, initial, 0, initial, 0);
-        width: oe_rem(150px);
+        width: oe_rem(120px);
         a {
           img {
             max-height: oe_rem(70px);
@@ -485,8 +501,7 @@
   #blockcart-modal .cart-content {
     padding-left: 0;
   }
-  #blockcart-modal .product-name,
-  #product-availability {
+  #blockcart-modal .product-name {
     margin-top: $small-space;
     margin-left: 0;
   }

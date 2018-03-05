@@ -88,14 +88,15 @@
 			.image {  
 				width: 100%;
 				height: 100%;
+				@include flex(center, center, row);
 				img { 
-					height: 100%;
+					// height: 100%;
 					display: block;
 					margin: 0 auto;
 					min-width: 100%;
 					min-height: 100%;
-					max-width: initial;
-					max-height: initial;
+					// max-width: initial;
+					// max-height: initial;
 					
 				}
 			}
@@ -139,11 +140,10 @@
 				}
 			}
 		}
+
 		@include media("<lg"){
 			.categorie { 
-				grid-column: 3/11 !important; 
-				height: auto !important;    
-				max-height: oe_rem(240px); 
+				grid-column: 3/11 !important;  
 				&:nth-child(3){   
 					height: oe_rem(700px);
 					max-height: oe_rem(700px);
@@ -157,15 +157,34 @@
 				&:nth-child(5),
 				&:nth-child(6){  
 					grid-column: 3/11 !important; 
-				} 
-				
-				.image {  
-					img{
-						height: 100% !important;
-					}
-				}
+				}  
+
 				.info{
 					height: 100%;
+					
+					.info-background{  
+						.title{
+							position: relative;
+							font-size: oe_rem(40px);
+							line-height: oe_rem(16px); 
+							margin-top: oe_rem(10px);  
+							margin-bottom: 0;  
+						}
+						.court_description{
+							font-size: oe_rem(18px); 
+							padding: 0;
+						}
+						.description{ 
+							font-size: 16px; 
+							color: $white;
+							margin: 10px 0;
+							p{
+								font-size: 16px; 
+								color: $white;
+								margin: 0;
+							}
+						} 
+					} 
 				} 
 			}
 		}
@@ -173,16 +192,13 @@
 		@include media("<md"){
 			.categorie {
 				grid-column: 1/13 !important; 
-				height: auto !important;    
-				min-height: oe_rem(160px); 
+				// height: auto !important;    
+				// min-height: oe_rem(160px); 
 				
-				&:nth-child(3){   
-					height: oe_rem(400px);
-					max-height: oe_rem(400px);
-					.info{
-						height: oe_rem(400px); 
-					}
-				}
+				// &:nth-child(3){   
+				// 	height: oe_rem(500px);
+				// 	max-height: oe_rem(500px); 
+				// }
 				
 				&:nth-child(2),
 				&:nth-child(3),
@@ -232,7 +248,20 @@
 					
 				} 
 			}
-		} 
+		}
+		 
+		@include media("<sm"){
+			.categorie { 
+				height: auto !important;    
+				min-height: oe_rem(160px); 
+				
+				&:nth-child(3){   
+					height: oe_rem(660px);
+					max-height: oe_rem(660px); 
+				}
+			}
+		}
+
 	}
 	
 }

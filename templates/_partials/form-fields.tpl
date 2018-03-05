@@ -136,6 +136,7 @@
               name="{$field.name}"
               type="password"
               value=""
+              placeholder="{$field.label}"
               pattern=".{literal}{{/literal}5,{literal}}{/literal}"
               {if $field.required}required{/if}
             >
@@ -161,6 +162,7 @@
             name="{$field.name}"
             type="{$field.type}"
             value="{$field.value}"
+            placeholder="{$field.label}"
             {if isset($field.availableValues.placeholder)}placeholder="{$field.availableValues.placeholder}"{/if}
             {if $field.maxLength}maxlength="{$field.maxLength}"{/if}
             {if $field.required}required{/if}

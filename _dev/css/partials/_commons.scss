@@ -50,14 +50,19 @@ h4,.h4 {
     color: $gray-darker;
     margin-bottom: $small-space; 
     line-height: initial;
-}
+} 
 h4, .h4 {font-size: 1rem; }
 img{
     max-width: 100%;
 }
-.page-cms video{
-    display: block;
-    margin: oe_rem(20px) auto;
+.page-cms{
+    video{
+        display: block;
+        max-width: 100%;
+        margin: oe_rem(20px) auto;
+    }
+    h2, .h2 {font-size: 1.5rem;  font-weight: 700 !important; }
+    h3, .h3 {font-size: 1.25rem;   }
 }
 .dropdown-item:focus,
 .dropdown-item:hover {
@@ -122,6 +127,7 @@ img{
 }
 .card {
     @include oe_box-shadow;
+    border: none;
 }
 label ,.label {
     color: $gray-darker;
@@ -135,7 +141,10 @@ small.label, small.value {
     padding-top: oe_rem(18px);
     text-align: left;
 }
-
+.required_fileds{
+    color: $color-danger;
+    font-size: oe_rem(14px);
+}
 .form-control {
     background: $gray-lighter;
     color: $gray;
@@ -366,6 +375,7 @@ input, textarea {
     }
     label {
         text-align: left;
+        display: inline;
     }
 }
 .text-muted {
@@ -624,7 +634,9 @@ input, textarea {
     .btn-voucher,
     .btn-supplier{
         width: 100%;
+        padding: 0 oe_rem(12px);
         margin: oe_rem(10px) 0;
+        font-size: oe_rem(14px);
     }
  
     .md-no-padding{
@@ -665,4 +677,8 @@ input, textarea {
     &:active{
         color: white;        
     }
+    @include media("<xl"){
+        display: none;
+    } 
+    
 }

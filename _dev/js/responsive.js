@@ -58,6 +58,7 @@ function toggleMobileStyles()
 	prestashop.emit('responsive update', {
 		mobile: prestashop.responsive.mobile
 	});
+
 }
 
 function toggleMobileFixed()
@@ -100,5 +101,6 @@ $(document).ready(function() {
 	if (prestashop.responsive.mobile) {
 		toggleMobileStyles();
 	}
+	console.log(prestashop.responsive);
 	toggleMobileFixed();
 });

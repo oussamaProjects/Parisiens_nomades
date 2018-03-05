@@ -20,7 +20,7 @@
       position: absolute;
       background: none;
       border: none;
-      bottom: 0.3125rem;
+      bottom: oe_rem(8px);
       right: 0.125rem;
       color: $gray;
       .search:hover {

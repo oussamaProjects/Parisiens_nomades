@@ -85,7 +85,7 @@
           {block name='page_header'}
             <h1 class="detail-product-title" itemprop="name">
               {block name='page_title'}
-              {if $product.combname && isset($product.combname)}
+              {if !empty($product.combname) &&  isset($product.combname)}
                 {$product.combname|strip_tags}
               {else}
                 {$product.name}

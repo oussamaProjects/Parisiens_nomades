@@ -43,7 +43,7 @@
       <div class="product-description"> 
         {block name='product_name'}
           <div class="product-title" itemprop="name"><a href="{$product.url}"> 
-              {if $product.combname and isset($product.combname)}
+              {if !empty($product.combname) && isset($product.combname)}
                 {$product.combname|strip_tags} 
               {else}
                 {$product.name|truncate:30:'...'} 

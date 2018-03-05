@@ -58,8 +58,6 @@
             <h3 class="h3 card-title">{l s='Order details' d='Shop.Theme.Checkout'}:</h3>
             <ul>
               <li>{l s='Order reference: %reference%' d='Shop.Theme.Checkout' sprintf=['%reference%' => $order.details.reference]}</li>
-
-              
             </ul>
           </div>
         {/block}

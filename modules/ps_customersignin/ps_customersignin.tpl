@@ -31,7 +31,7 @@
       </a>
       <div class="user-info-box">
         <a class="account" href="{$my_account_url}" title="{l s='View my customer account' d='Shop.Theme.Customeraccount'}" rel="nofollow" >
-          <span class="hidden-sm-down">{l s='My account' d='Shop.Theme.Customeraccount'}</span>
+          <span class="hidden-sm-down">{l s='Your account' d='Shop.Theme.Customeraccount'}</span>
         </a>
         <a class="logout hidden-sm-down" href="{$logout_url}" rel="nofollow" > 
           {l s='Sign out' d='Shop.Theme.Actions'}

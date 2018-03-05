@@ -62,7 +62,23 @@
 		}
 	}
 
+	@include media("<xl"){  
+		.bloc{
+			.image {  
+				max-height: oe_rem(300px); 
+				img {   
+					margin-top: oe_rem(-100px); 
+				}
+			}
+		}
+	}
+
 	@include media("<lg"){  
+	.bloc{
+		.image {  
+			max-height: auto;
+		}
+	}
 	}
 
 	@include media("<md"){
@@ -80,6 +96,7 @@
 				} 
 			} 
 			.image {  
+				max-height: auto; 
 				display: none;
 			}
 		}

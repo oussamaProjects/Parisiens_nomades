@@ -28,6 +28,8 @@ import 'owl-carousel-2/owl.carousel.min';
 import 'flexibility';
 import 'bootstrap-touchspin';
 
+import 'ez-plus/src/jquery.ez-plus';
+
 import './responsive';
 import './checkout';
 import './customer';
@@ -45,8 +47,8 @@ import TopMenu from './components/top-menu';
 import prestashop from 'prestashop';
 import EventEmitter from 'events';
 
-import './lib/bootstrap-filestyle.min';
-import './lib/jquery.scrollbox.min';
+import './lib/bootstrap-filestyle.min'; 
+import './lib/jquery.elevatezoom';
 
 import './components/block-cart';
 
@@ -119,4 +121,14 @@ $(document).ready(() => {
     return false;
   }); 
 
+  $('a.disable').click(function(e){
+    e.preventDefault();
+  }); 
+
+  
+	if (window.matchMedia("(max-width: 1024px)").matches) {
+    $('a.disable_mobile').click(function(e){
+      e.preventDefault();
+    });
+  }
 });

@@ -61,6 +61,7 @@ global_settings:
       - ps_bestsellers
       - ps_newproducts
       - editorial
+      - contactform
       - ps_categoryproducts
   hooks:
     modules_to_hook:
@@ -77,6 +78,7 @@ global_settings:
         - ps_imageslider
         - cdhomecategories 
         - ps_featuredproducts
+        - ps_newproducts
         - editorial
       displayFooterBefore:
         - blockreassurance
